@@ -1,0 +1,394 @@
+{
+ "13-1020": {
+  "BAL": {
+   "p25": 63200,
+   "median": 84590,
+   "emp": 4360,
+   "title": "Buyers and Purchasing Agents"
+  },
+  "DCM": {
+   "p25": 77690,
+   "median": 104880,
+   "emp": 14240,
+   "title": "Buyers and Purchasing Agents"
+  }
+ },
+ "13-1031": {
+  "BAL": {
+   "p25": 74300,
+   "median": 98700,
+   "emp": 4280,
+   "title": "Claims Adjusters, Examiners, and Investigators"
+  },
+  "DCM": {
+   "p25": 65590,
+   "median": 84590,
+   "emp": 2600,
+   "title": "Claims Adjusters, Examiners, and Investigators"
+  }
+ },
+ "13-1071": {
+  "BAL": {
+   "p25": 64140,
+   "median": 82380,
+   "emp": 7930,
+   "title": "Human Resources Specialists"
+  },
+  "DCM": {
+   "p25": 76070,
+   "median": 100830,
+   "emp": 24450,
+   "title": "Human Resources Specialists"
+  }
+ },
+ "13-1081": {
+  "BAL": {
+   "p25": 82400,
+   "median": 102700,
+   "emp": 3230,
+   "title": "Logisticians"
+  },
+  "DCM": {
+   "p25": 81410,
+   "median": 104330,
+   "emp": 8020,
+   "title": "Logisticians"
+  }
+ },
+ "13-1082": {
+  "BAL": {
+   "p25": 79600,
+   "median": 103720,
+   "emp": 14700,
+   "title": "Project Management Specialists"
+  },
+  "DCM": {
+   "p25": 95150,
+   "median": 127030,
+   "emp": 38230,
+   "title": "Project Management Specialists"
+  }
+ },
+ "13-1111": {
+  "BAL": {
+   "p25": 86500,
+   "median": 117750,
+   "emp": 8500,
+   "title": "Management Analysts"
+  },
+  "DCM": {
+   "p25": 101400,
+   "median": 126830,
+   "emp": 62360,
+   "title": "Management Analysts"
+  }
+ },
+ "13-1151": {
+  "BAL": {
+   "p25": 49540,
+   "median": 78220,
+   "emp": 4360,
+   "title": "Training and Development Specialists"
+  },
+  "DCM": {
+   "p25": 53360,
+   "median": 82400,
+   "emp": 11490,
+   "title": "Training and Development Specialists"
+  }
+ },
+ "13-1161": {
+  "BAL": {
+   "p25": 58240,
+   "median": 74620,
+   "emp": 5920,
+   "title": "Market Research Analysts and Marketing Specialists"
+  },
+  "DCM": {
+   "p25": 65730,
+   "median": 87160,
+   "emp": 21090,
+   "title": "Market Research Analysts and Marketing Specialists"
+  }
+ },
+ "13-1199": {
+  "BAL": {
+   "p25": 73000,
+   "median": 98060,
+   "emp": 16400,
+   "title": "Business Operations Specialists, All Other"
+  },
+  "DCM": {
+   "p25": 78800,
+   "median": 104770,
+   "emp": 76600,
+   "title": "Business Operations Specialists, All Other"
+  }
+ },
+ "13-2011": {
+  "BAL": {
+   "p25": 71100,
+   "median": 85160,
+   "emp": 13550,
+   "title": "Accountants and Auditors"
+  },
+  "DCM": {
+   "p25": 79990,
+   "median": 102140,
+   "emp": 41470,
+   "title": "Accountants and Auditors"
+  }
+ },
+ "13-2031": {
+  "BAL": {
+   "p25": 69910,
+   "median": 96150,
+   "emp": 1150,
+   "title": "Budget Analysts"
+  },
+  "DCM": {
+   "p25": 101400,
+   "median": 125050,
+   "emp": 4100,
+   "title": "Budget Analysts"
+  }
+ },
+ "13-2051": {
+  "BAL": {
+   "p25": 80120,
+   "median": 98880,
+   "emp": 3040,
+   "title": "Financial and Investment Analysts"
+  },
+  "DCM": {
+   "p25": 86470,
+   "median": 108330,
+   "emp": 10930,
+   "title": "Financial and Investment Analysts"
+  }
+ },
+ "13-2052": {
+  "BAL": {
+   "p25": 63090,
+   "median": 98970,
+   "emp": 3240,
+   "title": "Personal Financial Advisors"
+  },
+  "DCM": {
+   "p25": 75540,
+   "median": 106230,
+   "emp": 4330,
+   "title": "Personal Financial Advisors"
+  }
+ },
+ "13-2053": {
+  "BAL": {
+   "p25": 68930,
+   "median": 93510,
+   "emp": 770,
+   "title": "Insurance Underwriters"
+  },
+  "DCM": {
+   "p25": 74670,
+   "median": 90990,
+   "emp": 900,
+   "title": "Insurance Underwriters"
+  }
+ },
+ "13-2054": {
+  "BAL": {
+   "p25": 84160,
+   "median": 119720,
+   "emp": 390,
+   "title": "Financial Risk Specialists"
+  },
+  "DCM": {
+   "p25": 99230,
+   "median": 126510,
+   "emp": 1400,
+   "title": "Financial Risk Specialists"
+  }
+ },
+ "13-2072": {
+  "BAL": {
+   "p25": 46690,
+   "median": 68470,
+   "emp": 1810,
+   "title": "Loan Officers"
+  },
+  "DCM": {
+   "p25": 65270,
+   "median": 97800,
+   "emp": 5000,
+   "title": "Loan Officers"
+  }
+ },
+ "13-2081": {
+  "BAL": {
+   "p25": 53920,
+   "median": 65140,
+   "emp": 440,
+   "title": "Tax Examiners and Collectors, and Revenue Agents"
+  },
+  "DCM": {
+   "p25": 67550,
+   "median": 81320,
+   "emp": 960,
+   "title": "Tax Examiners and Collectors, and Revenue Agents"
+  }
+ },
+ "15-1211": {
+  "BAL": {
+   "p25": 84650,
+   "median": 108980,
+   "emp": 6850,
+   "title": "Computer Systems Analysts"
+  },
+  "DCM": {
+   "p25": 99690,
+   "median": 127040,
+   "emp": 18620,
+   "title": "Computer Systems Analysts"
+  }
+ },
+ "15-1212": {
+  "BAL": {
+   "p25": 104500,
+   "median": 138170,
+   "emp": 4600,
+   "title": "Information Security Analysts"
+  },
+  "DCM": {
+   "p25": 122590,
+   "median": 148950,
+   "emp": 16560,
+   "title": "Information Security Analysts"
+  }
+ },
+ "15-1232": {
+  "BAL": {
+   "p25": 50230,
+   "median": 62950,
+   "emp": 5080,
+   "title": "Computer User Support Specialists"
+  },
+  "DCM": {
+   "p25": 61470,
+   "median": 77860,
+   "emp": 18510,
+   "title": "Computer User Support Specialists"
+  }
+ },
+ "15-1242": {
+  "BAL": {
+   "p25": 100790,
+   "median": 123730,
+   "emp": 1190,
+   "title": "Database Administrators"
+  },
+  "DCM": {
+   "p25": 92350,
+   "median": 108750,
+   "emp": 3730,
+   "title": "Database Administrators"
+  }
+ },
+ "15-2051": {
+  "BAL": {
+   "p25": 102800,
+   "median": 134320,
+   "emp": 1090,
+   "title": "Data Scientists"
+  },
+  "DCM": {
+   "p25": 105700,
+   "median": 132200,
+   "emp": 9260,
+   "title": "Data Scientists"
+  }
+ },
+ "19-3011": {
+  "BAL": {
+   "p25": 109200,
+   "median": 152730,
+   "emp": 110,
+   "title": "Economists"
+  },
+  "DCM": {
+   "p25": 115830,
+   "median": 156750,
+   "emp": 4570,
+   "title": "Economists"
+  }
+ },
+ "27-3031": {
+  "BAL": {
+   "p25": 59990,
+   "median": 77570,
+   "emp": 1880,
+   "title": "Public Relations Specialists"
+  },
+  "DCM": {
+   "p25": 77120,
+   "median": 101680,
+   "emp": 22810,
+   "title": "Public Relations Specialists"
+  }
+ },
+ "41-3021": {
+  "BAL": {
+   "p25": 44970,
+   "median": 58300,
+   "emp": 2840,
+   "title": "Insurance Sales Agents"
+  },
+  "DCM": {
+   "p25": 47540,
+   "median": 65260,
+   "emp": 4030,
+   "title": "Insurance Sales Agents"
+  }
+ },
+ "41-3031": {
+  "BAL": {
+   "p25": 55430,
+   "median": 62080,
+   "emp": 4750,
+   "title": "Securities, Commodities, and Financial Services Sales Agents"
+  },
+  "DCM": {
+   "p25": 57930,
+   "median": 64300,
+   "emp": 8070,
+   "title": "Securities, Commodities, and Financial Services Sales Agents"
+  }
+ },
+ "41-3091": {
+  "BAL": {
+   "p25": 43600,
+   "median": 61840,
+   "emp": 11340,
+   "title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel"
+  },
+  "DCM": {
+   "p25": 51600,
+   "median": 78110,
+   "emp": 29300,
+   "title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel"
+  }
+ },
+ "41-4012": {
+  "BAL": {
+   "p25": 57460,
+   "median": 73080,
+   "emp": 3970,
+   "title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products"
+  },
+  "DCM": {
+   "p25": 56600,
+   "median": 74730,
+   "emp": 7740,
+   "title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products"
+  }
+ }
+}

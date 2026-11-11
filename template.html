@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Major to Paycheck</title>
+<meta name="description" content="Pick a Bowie State College of Business program and a place to live. See entry jobs, early pay, take-home after taxes and rent, and what gets you hired.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column of pay stubs under a sticky picker; stubs go two-up on wide screens. */
+:root {
+  --paper: #eef1f0;
+  --surface: #ffffff;
+  --ink: #15202b;
+  --muted: #56636e;
+  --line: #d5dbd9;
+  --accent: #1f47b8;
+  --accent-soft: #e3e9fb;
+  --stub: rgba(31, 71, 184, 0.045);
+  --good: #17713f; --good-bg: #e2f2e8;
+  --warn: #8d5a00; --warn-bg: #fbefd6;
+  --bad: #a3241b;  --bad-bg: #fbe3e0;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1318; --surface: #151c23; --ink: #e7ecef; --muted: #9aa7b2; --line: #28323c;
+    --accent: #93acff; --accent-soft: #1f2a4a; --stub: rgba(147, 172, 255, 0.05);
+    --good: #66cf92; --good-bg: #163324; --warn: #e7b25a; --warn-bg: #3a2c10; --bad: #f38a80; --bad-bg: #3d1b18;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1318; --surface: #151c23; --ink: #e7ecef; --muted: #9aa7b2; --line: #28323c;
+  --accent: #93acff; --accent-soft: #1f2a4a; --stub: rgba(147, 172, 255, 0.05);
+  --good: #66cf92; --good-bg: #163324; --warn: #e7b25a; --warn-bg: #3a2c10; --bad: #f38a80; --bad-bg: #3d1b18;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+header.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+header.top .wrap { padding-block: 28px 22px; display: grid; gap: 8px; }
+.eyebrow { font: 600 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 800 clamp(30px, 6vw, 46px)/1.02 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 60ch; }
+
+.picker { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+.picker .wrap { padding-block: 12px; display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; }
+.field { display: grid; gap: 4px; min-width: 0; flex: 1 1 260px; }
+.field label, .field .lbl { font: 600 12px/1 var(--body); color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+select { font: 500 15px/1.2 var(--body); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; }
+.seg { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--paper); }
+.seg button { min-height: 42px; flex: 1 1 0; font: 600 14px/1.15 var(--body); color: var(--ink); background: transparent; border: 0; padding: 10px 8px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+
+main .wrap { padding-block: 22px 40px; display: grid; gap: 26px; }
+.summary { display: grid; gap: 6px; }
+.summary h2 { font: 800 clamp(22px, 4vw, 30px)/1.1 var(--display); margin: 0; text-wrap: balance; }
+.summary p { margin: 0; color: var(--muted); max-width: 70ch; }
+.summary strong { color: var(--ink); }
+
+.stubs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 16px; }
+.stubs[data-count="3"] { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.stub { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; min-width: 0; container-type: inline-size; }
+.stub-head { padding: 16px 18px 12px; display: grid; gap: 6px; }
+.stub-title { display: flex; justify-content: space-between; align-items: start; gap: 10px; }
+.stub-title h3 { font: 700 19px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.does { margin: 0; color: var(--muted); font-size: 14px; }
+.pill { font: 600 12px/1 var(--body); padding: 6px 9px; border-radius: 999px; white-space: nowrap; }
+.pill.comfortable { color: var(--good); background: var(--good-bg); }
+.pill.tight { color: var(--warn); background: var(--warn-bg); }
+.pill.hard { color: var(--bad); background: var(--bad-bg); }
+.pay { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 4px; }
+.pay .big { font: 600 30px/1 var(--mono); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.pay .per { color: var(--muted); font-size: 13px; }
+.pay .src { font: 600 11px/1 var(--body); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px; text-transform: uppercase; letter-spacing: .05em; }
+.pay .median { flex-basis: 100%; color: var(--muted); font-size: 13px; }
+.path { margin: 6px 0 0; padding: 9px 11px; border-radius: 8px; background: var(--accent-soft); font-size: 14px; line-height: 1.45; }
+.path .path-lbl { display: block; font: 600 11px/1.3 var(--body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 2px; }
+.path strong { font: 600 14px/1 var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.path .arrow { color: var(--accent); font-weight: 600; padding-inline: 2px; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.ledger { background: repeating-linear-gradient(135deg, var(--stub) 0 2px, transparent 2px 8px); border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 12px 18px; font: 400 13.5px/1.9 var(--mono); font-variant-numeric: tabular-nums; }
+.ledger .row { display: flex; justify-content: space-between; gap: 10px; }
+.ledger .row span:first-child { color: var(--muted); font-family: var(--body); font-size: 13.5px; }
+.ledger .row.total { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 4px; font-weight: 600; }
+.ledger .row.total span:first-child, .ledger .row.left span:first-child { color: var(--ink); font-weight: 600; }
+.ledger .row.left { font-weight: 600; }
+.bar { margin: 10px 0 4px; height: 10px; border-radius: 999px; background: var(--line); position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; border-radius: 999px; }
+.bar i.comfortable { background: var(--good); } .bar i.tight { background: var(--warn); } .bar i.hard { background: var(--bad); }
+.bar-cap { font: 400 12px/1.4 var(--body); color: var(--muted); }
+
+.hire { padding: 14px 18px 4px; display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.hire h4 { font: 600 12px/1 var(--body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
+.hire ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14px; }
+.note { margin: 6px 18px 0; font-size: 13px; color: var(--muted); border-left: 3px solid var(--line); padding-left: 10px; }
+.links { padding: 12px 18px 16px; display: flex; flex-wrap: wrap; gap: 8px; align-self: end; }
+.links a { font: 600 13px/1 var(--body); text-decoration: none; border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; color: var(--accent); background: var(--surface); }
+.links a:hover { background: var(--accent-soft); }
+
+.founder { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 8px; }
+.founder h3 { font: 700 19px/1.2 var(--display); margin: 0; }
+.founder p { margin: 0; color: var(--muted); }
+
+.compare { display: grid; gap: 10px; }
+.compare h2, .next h2, .method h2 { font: 800 22px/1.15 var(--display); margin: 0; }
+.compare p { margin: 0; color: var(--muted); }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font: 600 12px/1.2 var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+th button { font: inherit; color: inherit; text-transform: inherit; letter-spacing: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline dotted; }
+th.on button { color: var(--accent); }
+td.num { font: 600 14px/1.3 var(--mono); }
+td.num small { display: block; font: 400 12px/1.3 var(--body); color: var(--muted); }
+td.num.comfortable { color: var(--good); } td.num.tight { color: var(--warn); } td.num.hard { color: var(--bad); }
+td.on { background: var(--accent-soft); }
+
+.next { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 10px; }
+.next .cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.next a.btn { font: 600 14px/1 var(--body); text-decoration: none; padding: 12px 14px; border-radius: 8px; background: var(--accent); color: var(--surface); }
+.next a.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+.next p { margin: 0; color: var(--muted); }
+
+.method { display: grid; gap: 10px; font-size: 14px; color: var(--muted); }
+.method p, .method ul { margin: 0; max-width: 75ch; }
+.method ul { padding-left: 18px; display: grid; gap: 4px; }
+.method strong { color: var(--ink); }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 16px 28px; font-size: 12.5px; color: var(--muted); }
+
+@container (max-width: 430px) {
+  .hire { grid-template-columns: 1fr; }
+  .pay .big { font-size: 26px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .stub { animation: rise .35s ease-out both; }
+  @keyframes rise { from { transform: translateY(6px); opacity: .6; } to { transform: none; opacity: 1; } }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Bowie State College of Business · Prototype</div>
+    <h1>Major to Paycheck</h1>
+    <p class="lede">Pick your program and where you want to live. See the jobs it leads to, what they pay early on, what's left after taxes and rent, and what gets you hired.</p>
+  </div>
+</header>
+
+<div class="picker" role="region" aria-label="Choose program and place">
+  <div class="wrap">
+    <div class="field">
+      <label for="program">Your program</label>
+      <select id="program"></select>
+    </div>
+    <div class="field">
+      <span class="lbl" id="place-label">Where you want to live</span>
+      <div class="seg" id="place" role="group" aria-labelledby="place-label"></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <section class="summary" id="summary" aria-live="polite"></section>
+    <section class="stubs" id="stubs" aria-label="Jobs this program leads to"></section>
+    <section id="founder-slot"></section>
+    <section class="compare" id="compare"></section>
+    <section class="next">
+      <h2>Your next step</h2>
+      <p>Knowing the roles is step one. See how ready you are for them, then go after the internships that lead there.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://andrewmangle.com" target="_blank" rel="noopener">Get your free Mangle Metric score</a>
+        <a class="btn ghost" href="https://www.instagram.com/fedinterndrop/" target="_blank" rel="noopener">Follow @fedinterndrop for federal internships</a>
+      </div>
+    </section>
+    <section class="method" id="method"></section>
+  </div>
+</main>
+<footer><div class="wrap">Independent prototype for Bowie State College of Business students. Not an official university tool. All figures are estimates for planning, not financial advice.</div></footer>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
+const VERDICT = { comfortable: "Living alone: comfortable", tight: "Living alone: tight", hard: "Living alone: hard" };
+const SRC = { est: "Estimate", bls: "BLS 25th pct", gs: "GS-7" };
+const state = { program: DATA.programs[0].id, place: "baltimore" };
+
+function esc(s) { return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+function setupControls() {
+  const sel = $("#program");
+  const depts = [...new Set(DATA.programs.map((p) => p.dept))];
+  sel.innerHTML = depts.map((d) => `<optgroup label="${esc(d)}">` +
+    DATA.programs.filter((p) => p.dept === d).map((p) => `<option value="${p.id}">${esc(p.name)}</option>`).join("") +
+    "</optgroup>").join("");
+  sel.addEventListener("change", () => go(sel.value, state.place));
+  const seg = $("#place");
+  seg.innerHTML = Object.entries(DATA.places).map(([id, p]) =>
+    `<button type="button" id="place-${id}" data-place="${id}" aria-pressed="false">${esc(p.name)}</button>`).join("");
+  seg.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) go(state.program, b.dataset.place); });
+}
+
+function go(program, place) {
+  const h = `#${program}-${place}`;
+  if (location.hash !== h) { try { history.replaceState(null, "", h); } catch (_) { location.hash = h; } }
+  state.program = program; state.place = place; render();
+}
+
+function fromHash() {
+  const h = location.hash.slice(1);
+  for (const pl of Object.keys(DATA.places)) {
+    if (h.endsWith("-" + pl)) {
+      const pr = h.slice(0, -(pl.length + 1));
+      if (DATA.programs.some((p) => p.id === pr)) { state.program = pr; state.place = pl; return; }
+    }
+  }
+  const pr = DATA.programs.find((p) => p.id === h);
+  if (pr) state.program = pr.id;
+}
+
+function firstJobHTML(b) {
+  const f = b.first_job;
+  if (!f) return "";
+  const pay = f.low === f.high ? usd(f.low) : `${usd(f.low)} to ${usd(f.high)}`;
+  return `<p class="path"><span class="path-lbl">Most new grads start in support or analyst jobs</span>
+    Where most people start: ${esc(f.label)}, <strong>${pay}</strong>
+    <span class="arrow" aria-hidden="true">→</span><span class="vh">, then</span>
+    this job after experience: <strong>${usd(b.start)}</strong></p>`;
+}
+
+function stubHTML(rid, r, b, place) {
+  const pct = Math.round(b.rent_share * 100);
+  const width = Math.min(100, pct);
+  const median = r.soc && b.start_src !== "gs"
+    ? `Median with experience: ${usd(b.median)}`
+    : `Median for all economists here: ${usd(b.median)}`;
+  return `<article class="stub">
+    <div class="stub-head">
+      <div class="stub-title"><h3>${esc(r.title)}</h3><span class="pill ${b.verdict}">${VERDICT[b.verdict]}</span></div>
+      <p class="does">${esc(r.does)}</p>
+      <div class="pay"><span class="big">${usd(b.start)}</span><span class="per">${b.first_job ? "a year, after a first job" : "a year, early career"}</span>
+        <span class="src" title="${b.start_src === "est" ? "Estimated at " + Math.round(DATA.ratio * 100) + "% of the metro median" : b.start_src === "gs" ? "2026 federal GS-7, step 1" : "BLS 25th percentile"}">${SRC[b.start_src]}</span>
+        <span class="median">${median}</span></div>
+      ${firstJobHTML(b)}
+    </div>
+    <div class="ledger" aria-label="Monthly budget">
+      <div class="row"><span>Monthly pay before taxes</span><span>${usd(b.gross_m)}</span></div>
+      <div class="row"><span>Federal income tax</span><span>−${usd(b.fed_m)}</span></div>
+      <div class="row"><span>Social Security and Medicare</span><span>−${usd(b.fica_m)}</span></div>
+      <div class="row"><span>${esc(place.state_name)}</span><span>−${usd(b.state_m)}</span></div>
+      ${b.local_m ? `<div class="row"><span>${esc(place.local_name)}</span><span>−${usd(b.local_m)}</span></div>` : ""}
+      <div class="row total"><span>Take-home</span><span>${usd(b.take_m)}</span></div>
+      <div class="row"><span>One-bedroom rent</span><span>−${usd(b.rent)}</span></div>
+      <div class="row left"><span>Left for everything else</span><span>${usd(b.left_m)}</span></div>
+      <div class="bar" role="img" aria-label="Rent is ${pct}% of pay before taxes"><i class="${b.verdict}" style="width:${width}%"></i></div>
+      <div class="bar-cap">Rent is ${pct}% of pay before taxes. Under 30% is the usual rule of thumb.</div>
+    </div>
+    <div class="hire">
+      <div><h4>Employers look for</h4><ul>${r.screens.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>
+      <div><h4>Close the gap</h4><ul>${r.close.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>
+    </div>
+    ${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}
+    <div class="links">
+      <a href="${b.linkedin}" target="_blank" rel="noopener">Entry-level jobs on LinkedIn ↗</a>
+      <a href="${b.usajobs}" target="_blank" rel="noopener">Federal internships on USAJOBS ↗</a>
+    </div>
+  </article>`;
+}
+
+function render() {
+  const prog = DATA.programs.find((p) => p.id === state.program);
+  const place = DATA.places[state.place];
+  $("#program").value = prog.id;
+  document.querySelectorAll("#place button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.place === state.place)));
+
+  const rows = prog.roles.map((id) => [id, DATA.roles[id], DATA.roles[id].by_place[state.place]]);
+  const starts = rows.map(([, , b]) => b.start);
+  const comfy = rows.filter(([, , b]) => b.verdict === "comfortable").length;
+  $("#summary").innerHTML = `<div class="eyebrow">${esc(prog.kind)} · ${esc(prog.dept)}</div>
+    <h2>${esc(prog.name)} in ${esc(place.name)}</h2>
+    <p>Early-career pay for these ${rows.length} jobs runs <strong>${usd(Math.min(...starts))} to ${usd(Math.max(...starts))}</strong> a year.
+    A one-bedroom in ${esc(place.long)} rents for about <strong>${usd(place.rent)} a month</strong>.
+    ${comfy === rows.length ? "On every one of these, living alone fits the 30% rule." : comfy === 0 ? "On none of these does living alone fit the 30% rule at first. A roommate changes the math." : `On ${comfy} of ${rows.length}, living alone fits the 30% rule.`}</p>`;
+
+  $("#stubs").dataset.count = rows.length;
+  $("#stubs").innerHTML = rows.map(([id, r, b]) => stubHTML(id, r, b, place)).join("");
+
+  $("#founder-slot").innerHTML = prog.founder ? `<div class="founder">
+      <div class="eyebrow">Also on this path</div>
+      <h3>Starting your own business</h3>
+      <p>There is no salary data for founders, and early income is uneven. Many founders keep one of the jobs above while they start, then go full time once revenue covers their rent.</p>
+      <p>Free help in the region: <a href="https://www.marylandsbdc.org/" target="_blank" rel="noopener">Maryland Small Business Development Center</a>, <a href="https://www.sba.gov/" target="_blank" rel="noopener">U.S. Small Business Administration</a>, and <a href="https://www.score.org/" target="_blank" rel="noopener">SCORE mentors</a>.</p>
+    </div>` : "";
+
+  const pids = Object.keys(DATA.places);
+  $("#compare").innerHTML = `<h2>Compare all three places</h2>
+    <p>Monthly money left after taxes and a one-bedroom. DC and Northern Virginia share the same wage and rent data, so the difference there comes from taxes.</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th scope="col">Job</th>${pids.map((p) =>
+        `<th scope="col" class="${p === state.place ? "on" : ""}"><button type="button" data-place="${p}">${esc(DATA.places[p].name)}</button></th>`).join("")}</tr></thead>
+      <tbody>${rows.map(([id, r]) => `<tr><td>${esc(r.title)}</td>${pids.map((p) => {
+        const b = r.by_place[p];
+        return `<td class="num ${b.verdict}${p === state.place ? " on" : ""}">${usd(b.left_m)}<small>${usd(b.start)} a year</small></td>`;
+      }).join("")}</tr>`).join("")}</tbody>
+    </table></div>`;
+  $("#compare").querySelectorAll("th button").forEach((b) => b.addEventListener("click", () => go(state.program, b.dataset.place)));
+}
+
+function renderMethod() {
+  const pct = Math.round(DATA.ratio * 100);
+  $("#method").innerHTML = `<h2>How these numbers work</h2>
+    <ul>
+      <li><strong>Early-career pay</strong> is the 25th percentile wage for the job in the metro area: what the lower-paid quarter of workers earn. It is a common stand-in for early-career pay, and some new grads start below it.${DATA.anyEstimate ? ` Where the tag says <strong>Estimate</strong>, it is ${pct}% of the metro median until the official BLS percentile is loaded.` : ""} Economist pay uses the 2026 federal GS-7 rate (${usd(DATA.gs7)}), the usual entry level for bachelor's graduates.</li>
+      <li><strong>Where most people start</strong> appears on jobs new grads rarely get first. It is the 25th percentile wage, from the same BLS file, for the usual stepping-stone job: Computer User Support Specialists for IT support, and Market Research Analysts and Marketing Specialists for data or junior analyst work. The budget below it still uses the pay for the job itself.</li>
+      <li><strong>Median with experience</strong> is what the middle worker in that job earns in the metro, across all experience levels.</li>
+      <li><strong>Taxes</strong> assume a single filer in 2026 with the standard deduction and no retirement contributions or other deductions. Your paycheck will differ.</li>
+      <li><strong>Rent</strong> is HUD's Fair Market Rent for a one-bedroom, a typical rent for a modest unit. DC and Northern Virginia share one HUD area.</li>
+      <li><strong>Living alone</strong> is comfortable when rent is 30% or less of pay before taxes, tight at 30 to 40%, and hard above 40%.</li>
+    </ul>
+    <p>Sources: ${DATA.sources.map(([k, v, u]) => `${esc(k)}: <a href="${u}" target="_blank" rel="noopener">${esc(v)}</a>`).join("; ")}. Data as of ${esc(DATA.asOf)}.</p>`;
+}
+
+setupControls();
+fromHash();
+renderMethod();
+render();
+window.addEventListener("hashchange", () => { fromHash(); render(); });
+</script>
+</body>
+</html>

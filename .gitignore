@@ -1,0 +1,7 @@
+# Raw BLS downloads are large; keep only the extracted bls_wages.json in git.
+oesm25ma/
+*.xlsx
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
