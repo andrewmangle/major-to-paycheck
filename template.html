@@ -1,10 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Major to Paycheck</title>
-<meta name="description" content="Pick a Bowie State College of Business program and a place to live. See entry jobs, early pay, take-home after taxes and rent, and what gets you hired.">
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap">
@@ -85,11 +80,8 @@ main .wrap { padding-block: 22px 40px; display: grid; gap: 26px; }
 .pay .per { color: var(--muted); font-size: 13px; }
 .pay .src { font: 600 11px/1 var(--body); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px; text-transform: uppercase; letter-spacing: .05em; }
 .pay .median { flex-basis: 100%; color: var(--muted); font-size: 13px; }
-.path { margin: 6px 0 0; padding: 9px 11px; border-radius: 8px; background: var(--accent-soft); font-size: 14px; line-height: 1.45; }
-.path .path-lbl { display: block; font: 600 11px/1.3 var(--body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 2px; }
-.path strong { font: 600 14px/1 var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.path .arrow { color: var(--accent); font-weight: 600; padding-inline: 2px; }
-.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.jobs { font: 600 13px/1.3 var(--body); color: var(--ink); display: flex; align-items: center; gap: 6px; }
+.jobs::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--accent); flex: none; }
 
 .ledger { background: repeating-linear-gradient(135deg, var(--stub) 0 2px, transparent 2px 8px); border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 12px 18px; font: 400 13.5px/1.9 var(--mono); font-variant-numeric: tabular-nums; }
 .ledger .row { display: flex; justify-content: space-between; gap: 10px; }
@@ -109,6 +101,8 @@ main .wrap { padding-block: 22px 40px; display: grid; gap: 26px; }
 .links { padding: 12px 18px 16px; display: flex; flex-wrap: wrap; gap: 8px; align-self: end; }
 .links a { font: 600 13px/1 var(--body); text-decoration: none; border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; color: var(--accent); background: var(--surface); }
 .links a:hover { background: var(--accent-soft); }
+.links a.signup { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+.links a.signup:hover { background: var(--accent); opacity: .9; }
 
 .founder { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 8px; }
 .founder h3 { font: 700 19px/1.2 var(--display); margin: 0; }
@@ -151,8 +145,6 @@ footer .wrap { padding-block: 16px 28px; font-size: 12.5px; color: var(--muted);
   @keyframes rise { from { transform: translateY(6px); opacity: .6; } to { transform: none; opacity: 1; } }
 }
 </style>
-</head>
-<body>
 
 <header class="top">
   <div class="wrap">
@@ -185,7 +177,8 @@ footer .wrap { padding-block: 16px 28px; font-size: 12.5px; color: var(--muted);
       <h2>Your next step</h2>
       <p>Knowing the roles is step one. See how ready you are for them, then go after the internships that lead there.</p>
       <div class="cta-row">
-        <a class="btn" href="https://andrewmangle.com" target="_blank" rel="noopener">Get your free Mangle Metric score</a>
+        <a class="btn" id="signup-main" href="#" target="_blank" rel="noopener">Get openings sent to you</a>
+        <a class="btn ghost" href="https://andrewmangle.com" target="_blank" rel="noopener">Get your free Mangle Metric score</a>
         <a class="btn ghost" href="https://www.instagram.com/fedinterndrop/" target="_blank" rel="noopener">Follow @fedinterndrop for federal internships</a>
       </div>
     </section>
@@ -199,7 +192,7 @@ const DATA = /*__DATA__*/null;
 const $ = (s) => document.querySelector(s);
 const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
 const VERDICT = { comfortable: "Living alone: comfortable", tight: "Living alone: tight", hard: "Living alone: hard" };
-const SRC = { est: "Estimate", bls: "BLS 25th pct", gs: "GS-7" };
+const SRC = { est: "Estimate", bls: "BLS 25th pct", gs: "GS-7", first: "First job" };
 const state = { program: DATA.programs[0].id, place: "baltimore" };
 
 function esc(s) { return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
@@ -235,30 +228,33 @@ function fromHash() {
   if (pr) state.program = pr.id;
 }
 
-function firstJobHTML(b) {
-  const f = b.first_job;
-  if (!f) return "";
-  const pay = f.low === f.high ? usd(f.low) : `${usd(f.low)} to ${usd(f.high)}`;
-  return `<p class="path"><span class="path-lbl">Most new grads start in support or analyst jobs</span>
-    Where most people start: ${esc(f.label)}, <strong>${pay}</strong>
-    <span class="arrow" aria-hidden="true">→</span><span class="vh">, then</span>
-    this job after experience: <strong>${usd(b.start)}</strong></p>`;
+function signupUrl(job, placeName) {
+  const f = DATA.signup, e = f.entries || {};
+  const prog = DATA.programs.find((p) => p.id === state.program);
+  const place = (f.place_choices || {})[state.place] || placeName;
+  const pairs = [[e.program, prog ? prog.name : ""], [e.job, job], [e.place, place]].filter(([k, v]) => k && v);
+  if (!pairs.length) return f.form;
+  return f.form + "?usp=pp_url&" + pairs.map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
 }
 
 function stubHTML(rid, r, b, place) {
   const pct = Math.round(b.rent_share * 100);
   const width = Math.min(100, pct);
-  const median = r.soc && b.start_src !== "gs"
-    ? `Median with experience: ${usd(b.median)}`
-    : `Median for all economists here: ${usd(b.median)}`;
+  const median = b.first
+    ? `Once you're in this job: ${usd(b.role_start)} early career, ${usd(b.median)} median`
+    : b.start_src !== "gs"
+      ? `Median with experience: ${usd(b.median)}`
+      : `Median for all economists here: ${usd(b.median)}`;
+  const perLabel = b.first ? `a year in ${esc(b.first.label)}, where most people start` : "a year, early career";
+  const jobs = b.emp ? `<div class="jobs">${b.emp.toLocaleString("en-US")} people work in this job in the ${esc(b.metro_name)}</div>` : "";
   return `<article class="stub">
     <div class="stub-head">
       <div class="stub-title"><h3>${esc(r.title)}</h3><span class="pill ${b.verdict}">${VERDICT[b.verdict]}</span></div>
       <p class="does">${esc(r.does)}</p>
-      <div class="pay"><span class="big">${usd(b.start)}</span><span class="per">${b.first_job ? "a year, after a first job" : "a year, early career"}</span>
+      <div class="pay"><span class="big">${usd(b.start)}</span><span class="per">${perLabel}</span>
         <span class="src" title="${b.start_src === "est" ? "Estimated at " + Math.round(DATA.ratio * 100) + "% of the metro median" : b.start_src === "gs" ? "2026 federal GS-7, step 1" : "BLS 25th percentile"}">${SRC[b.start_src]}</span>
         <span class="median">${median}</span></div>
-      ${firstJobHTML(b)}
+      ${jobs}
     </div>
     <div class="ledger" aria-label="Monthly budget">
       <div class="row"><span>Monthly pay before taxes</span><span>${usd(b.gross_m)}</span></div>
@@ -278,6 +274,7 @@ function stubHTML(rid, r, b, place) {
     </div>
     ${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}
     <div class="links">
+      <a class="signup" href="${signupUrl(r.title, place.name)}" target="_blank" rel="noopener">Get openings for this job</a>
       <a href="${b.linkedin}" target="_blank" rel="noopener">Entry-level jobs on LinkedIn ↗</a>
       <a href="${b.usajobs}" target="_blank" rel="noopener">Federal internships on USAJOBS ↗</a>
     </div>
@@ -328,8 +325,9 @@ function renderMethod() {
   $("#method").innerHTML = `<h2>How these numbers work</h2>
     <ul>
       <li><strong>Early-career pay</strong> is the 25th percentile wage for the job in the metro area: what the lower-paid quarter of workers earn. It is a common stand-in for early-career pay, and some new grads start below it.${DATA.anyEstimate ? ` Where the tag says <strong>Estimate</strong>, it is ${pct}% of the metro median until the official BLS percentile is loaded.` : ""} Economist pay uses the 2026 federal GS-7 rate (${usd(DATA.gs7)}), the usual entry level for bachelor's graduates.</li>
-      <li><strong>Where most people start</strong> appears on jobs new grads rarely get first. It is the 25th percentile wage, from the same BLS file, for the usual stepping-stone job: Computer User Support Specialists for IT support, and Market Research Analysts and Marketing Specialists for data or junior analyst work. The budget below it still uses the pay for the job itself.</li>
+      <li><strong>Where most people start</strong>: few people become cybersecurity analysts, data scientists or database administrators straight out of college. For those, the budget uses early-career pay for the usual first job (IT support, or a data or market research analyst job), and shows the target job's pay once you get there.</li>
       <li><strong>Median with experience</strong> is what the middle worker in that job earns in the metro, across all experience levels.</li>
+      <li><strong>People in this job</strong> is BLS employment for the metro area (May 2025). DC and Northern Virginia share the DC metro count. More jobs usually means more openings each year.</li>
       <li><strong>Taxes</strong> assume a single filer in 2026 with the standard deduction and no retirement contributions or other deductions. Your paycheck will differ.</li>
       <li><strong>Rent</strong> is HUD's Fair Market Rent for a one-bedroom, a typical rent for a modest unit. DC and Northern Virginia share one HUD area.</li>
       <li><strong>Living alone</strong> is comfortable when rent is 30% or less of pay before taxes, tight at 30 to 40%, and hard above 40%.</li>
@@ -337,11 +335,10 @@ function renderMethod() {
     <p>Sources: ${DATA.sources.map(([k, v, u]) => `${esc(k)}: <a href="${u}" target="_blank" rel="noopener">${esc(v)}</a>`).join("; ")}. Data as of ${esc(DATA.asOf)}.</p>`;
 }
 
+document.getElementById("signup-main").href = DATA.signup.form;
 setupControls();
 fromHash();
 renderMethod();
 render();
 window.addEventListener("hashchange", () => { fromHash(); render(); });
 </script>
-</body>
-</html>

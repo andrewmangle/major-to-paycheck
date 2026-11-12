@@ -1,4 +1,4 @@
-"""Build the Major to Paycheck page: python3 build.py  ->  index.html (served by GitHub Pages)"""
+"""Build the Major to Paycheck page: python3 build.py  ->  major-to-paycheck.html"""
 import json
 import urllib.parse
 from pathlib import Path
@@ -64,15 +64,6 @@ def pay_for(role, metro):
     return round(median * D.P25_RATIO / 500) * 500, "est", median
 
 
-def first_job(role, metro):
-    """Pay range for the stepping-stone job(s) most new grads take before this role, or None."""
-    fj = role.get("first_job")
-    if not fj:
-        return None
-    pays = sorted({pay_for(D.ROLES[v], metro)[0] for v in fj["via"]})
-    return {"label": fj["label"], "low": pays[0], "high": pays[-1]}
-
-
 def build():
     places = {}
     for pid, p in D.PLACES.items():
@@ -87,18 +78,26 @@ def build():
         out["by_place"] = {}
         for pid, p in D.PLACES.items():
             start, src, median = pay_for(r, p["metro"])
+            role_start, first = start, None
+            if r.get("first_job"):
+                fsoc, flabel = r["first_job"]
+                fpay = BLS[fsoc][p["metro"]]["p25"]
+                first = {"label": flabel, "soc": fsoc, "pay": fpay}
+                start, src = fpay, "first"
+            emp = BLS.get(r["soc"], {}).get(p["metro"], {}).get("emp")
             tx = taxes(start, p)
             m = lambda v: round(v / 12)
             gross_m = m(start)
             take = gross_m - m(tx["fed"]) - m(tx["fica"]) - m(tx["state"]) - m(tx["local"])
             share = p["rent"] / (start / 12)
             out["by_place"][pid] = {
-                "start": start, "start_src": src, "median": median,
+                "start": start, "start_src": src, "median": median, "role_start": role_start,
+                "first": first, "emp": emp,
+                "metro_name": {"BAL": "Baltimore area", "DCM": "DC metro area"}[p["metro"]],
                 "gross_m": gross_m, "fed_m": m(tx["fed"]), "fica_m": m(tx["fica"]),
                 "state_m": m(tx["state"]), "local_m": m(tx["local"]),
                 "take_m": take, "rent": p["rent"], "left_m": take - p["rent"],
                 "rent_share": round(share, 3), "verdict": verdict(share),
-                "first_job": first_job(r, p["metro"]),
                 "linkedin": "https://www.linkedin.com/jobs/search/?" + urllib.parse.urlencode(
                     {"keywords": r["search"], "location": p["linkedin"], "f_E": "1,2"}),
                 "usajobs": "https://www.usajobs.gov/search/results/?" + urllib.parse.urlencode(
@@ -108,12 +107,19 @@ def build():
 
     payload = {"asOf": D.DATA_AS_OF, "ratio": D.P25_RATIO, "places": places, "roles": roles,
                "programs": D.PROGRAMS, "sources": D.SOURCES,
-               "gs7": D.GS_2026_DCB["GS-7"],
+               "gs7": D.GS_2026_DCB["GS-7"], "signup": D.SIGNUP,
                "anyEstimate": any(b["start_src"] == "est" for r in roles.values() for b in r["by_place"].values())}
     html = (HERE / "template.html").read_text()
     html = html.replace("/*__DATA__*/null", json.dumps(payload, separators=(",", ":")))
-    out = HERE / "index.html"
+    out = HERE / "major-to-paycheck.html"
     out.write_text(html)
+    # Standalone copy for GitHub Pages, which serves index.html from the repo root
+    # (the artifact host adds this skeleton itself)
+    head, body = html.split("</style>", 1)
+    (HERE / "index.html").write_text(
+        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+        + head + "</style>\n</head>\n<body>" + body + "\n</body>\n</html>\n")
     return out, payload
 
 

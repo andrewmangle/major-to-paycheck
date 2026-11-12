@@ -60,8 +60,6 @@ WAGES = {
 GS_2026_DCB = {"GS-5": 46610, "GS-7": 57736, "GS-9": 70623}  # OPM 2026, Washington-Baltimore-Arlington locality, step 1
 
 # Each role: what students would call it, the BLS occupation behind it, and what gets you hired.
-# first_job (optional): for roles new grads rarely land first. via lists the stepping-stone roles
-# whose BLS 25th percentile is shown as "Where most people start" (a range when there are two).
 ROLES = {
     "staff-accountant": dict(
         title="Staff Accountant / Audit Associate", soc="13-2011",
@@ -171,8 +169,8 @@ ROLES = {
         screens=["CompTIA Security+ (a baseline for many DC-area defense jobs)", "Hands-on lab experience"],
         close=["Earn Security+ before you graduate",
                "Build a home lab and practice in capture-the-flag events"],
+        first_job=("15-1232", "IT support"),
         note="Many jobs near DC need a security clearance, which usually requires US citizenship.",
-        first_job=dict(label="IT support", via=["it-support"]),
         search="SOC analyst"),
     "it-support": dict(
         title="IT Support Specialist", soc="15-1232",
@@ -194,8 +192,8 @@ ROLES = {
         screens=["SQL plus Python or R", "A portfolio of real projects"],
         close=["Publish two portfolio projects on GitHub or Tableau Public",
                "Practice SQL interview questions until they feel routine"],
-        note="BLS has no separate data analyst category, so first-job pay uses market research analysts.",
-        first_job=dict(label="a data or market research analyst", via=["market-research"]),
+        first_job=("13-1161", "a data or market research analyst job"),
+        note="Data scientist titles often ask for experience or a graduate degree. A data analyst job is the usual first step.",
         search="data analyst"),
     "database-admin": dict(
         title="Database Administrator", soc="15-1242",
@@ -203,7 +201,7 @@ ROLES = {
         screens=["Strong SQL", "Cloud basics"],
         close=["Earn AWS Cloud Practitioner or Azure Fundamentals",
                "Build and maintain a database for a real club or small business"],
-        first_job=dict(label="IT support or a junior analyst", via=["it-support", "market-research"]),
+        first_job=("15-1232", "IT support"),
         search="junior database administrator"),
     "ops-specialist": dict(
         title="Business Operations Specialist", soc="13-1199",
@@ -313,3 +311,14 @@ SOURCES = [
     ("Programs", "Bowie State University College of Business",
      "https://bowiestate.edu/academics/colleges/college-of-business/"),
 ]
+
+# Sign-up form. Each card's "Get openings for this job" button opens this form.
+# To pre-fill program, job and place: in Google Forms choose "Get pre-filled link", fill those three
+# questions with any text, copy the link, and put each question's entry number here (e.g. "entry.123456789").
+# Program names must match the form's Program dropdown exactly, and place_choices must match the
+# "Where you want to live" checkboxes exactly, or Google ignores the pre-filled value.
+SIGNUP = {
+    "form": "https://docs.google.com/forms/d/1iULh9xo4Mdg42vcvy0nBgVo9N4xvB6u-SmagbndvgYo/viewform",
+    "entries": {"program": "", "job": "", "place": ""},
+    "place_choices": {"baltimore": "Baltimore", "dc": "Washington DC", "nova": "Northern Virginia"},
+}

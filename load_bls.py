@@ -1,5 +1,5 @@
 """Pull exact BLS wages for our occupations from the OEWS metro file into bls_wages.json.
-Usage: python3 load_bls.py path/to/oesm25ma/MSA_M2025_dl.xlsx  (needs: pip install -r requirements.txt)"""
+Usage: python3 load_bls.py path/to/MSA_M2025_dl.xlsx  (needs: pip install -r requirements.txt)"""
 import json, sys
 from pathlib import Path
 import pandas as pd

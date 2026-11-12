@@ -5,3 +5,5 @@ oesm25ma/
 __pycache__/
 *.pyc
 .DS_Store
+major-to-paycheck.html
+site/
