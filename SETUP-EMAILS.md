@@ -2,9 +2,9 @@
 
 How it fits together:
 
-1. **Daily, on your computer (Docker):** `usajobs` pulls open federal internships, then `feed` writes
-   `openings.json`, matched to Career Route jobs and places. Copy it to `openings.json` in the repo root and push to
-   GitHub Pages. It contains only public listing data.
+1. **Daily, on your computer (automatic):** Windows Task Scheduler runs `scripts/daily_feed.sh` at 7:00 AM.
+   It pulls open federal student listings from USAJOBS, writes `openings.json` matched to Career Route jobs and
+   places, and pushes it to GitHub Pages. It contains only public listing data.
 2. **In Google (Apps Script):** your form's response Sheet runs `Code.gs`. Each new sign-up gets a welcome
    email right away with current matches. Every Monday, each subscriber gets new matches. Students who chose
    Instagram DM or Text also get a ready-to-paste message in the "DM queue" tab.
@@ -28,16 +28,20 @@ Student information never leaves your Google account.
 6. Submit the form yourself, then run **sendTestDigestToMe**. Check both emails. When they look right,
    set `TEST_MODE: false` and save.
 
-## Daily feed (Docker, from the internfeed-shorts folder)
+## Daily feed (automatic)
 
-```powershell
-docker run --rm --env-file .env -v "${PWD}/data:/app/data" internfeed-shorts usajobs --close-missing
-docker run --rm -v "${PWD}/data:/app/data" -v "${PWD}/output:/app/output" internfeed-shorts feed
-copy output\feed\openings.json D:\internfeed\major-to-paycheck\openings.json
-```
+Windows Task Scheduler task **Career Route daily feed** runs at 7:00 AM. If the computer is off then, it runs
+as soon as you turn it on and log in. It runs `scripts/daily_feed.sh` in WSL (Ubuntu), which:
 
-Then commit and push the site. Claude Code can run these and the push for you on a schedule.
-Refresh `data/careerroute.json` from `major-to-paycheck/careerroute.json` whenever you change jobs in data.py.
+1. pulls open listings on the USAJOBS Students hiring path (key and email from internfeed-shorts `.env`)
+   into `internfeed-shorts/data/careerroute_usajobs.xlsx` (separate from the Fed Intern Drop video sheet),
+2. runs internfeed-shorts `feed` against this repo's `careerroute.json`,
+3. copies `openings.json` into the repo root, commits it and pushes.
+
+It publishes at most once a day, never publishes an empty feed, and stops without changing the live feed if
+USAJOBS fails. Log: `~/.local/state/careerroute-feed/feed.log` in WSL. Run it by hand with
+`bash scripts/daily_feed.sh --force`. It uses the Python environment in `~/.venvs/careerroute-feed`
+(pandas, openpyxl, numpy, scipy, pillow), not Docker.
 
 ## Limits and upkeep
 

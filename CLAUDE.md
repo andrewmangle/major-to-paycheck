@@ -38,6 +38,7 @@ approach. Fed Intern Drop (@fedinterndrop) and the Mangle Metric (andrewmangle.c
   (script in `hub_template.html`).
 - `form/setup_signup_form.gs`: Apps Script that created the live form's questions and printed the pre-fill numbers.
   Its PROGRAMS and PLACES lists must match data.py (tests check this).
+- `scripts/daily_feed.sh`: the daily openings feed run by Windows Task Scheduler (see SETUP-EMAILS.md).
 - `tests/`: `python3 -m unittest discover -s tests`. Run before every push.
 
 ## Publishing
@@ -74,9 +75,9 @@ title the emails need is missing from form/setup_signup_form.gs. If a title is e
 
 ## Open tasks (in rough priority order)
 1. Set up emails with SETUP-EMAILS.md (Andrew runs it in Google; start with TEST_MODE on).
-2. REMIND ANDREW: the openings feed is not running yet, so `openings.json` does not exist and emails send
-   search links only. Rebuild the internfeed-shorts Docker image, run `usajobs` then `feed`, copy
-   openings.json into the repo root, push, and decide whether to automate it daily. Bring this up once emails are set up.
+2. Openings feed runs daily (since 2026-11-13): Task Scheduler task "Career Route daily feed", 7:00 AM, catches up
+   at logon. Script `scripts/daily_feed.sh` (see SETUP-EMAILS.md). Check `~/.local/state/careerroute-feed/feed.log`
+   if openings.json stops updating.
 3. Collect student feedback from the class Slack thread; key test question before and after use:
    "Can you name two jobs you would apply for and what they pay?"
 4. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
@@ -95,7 +96,7 @@ title the emails need is missing from form/setup_signup_form.gs. If a title is e
 - Sign-up emails: `apps_script_template.gs` builds `apps-script/Code.gs` (Google Apps Script for the form's
   response Sheet). Setup steps in SETUP-EMAILS.md. Apps Script cannot call USAJOBS directly (it strips the
   User-Agent header USAJOBS requires), which is why openings come from the Docker feed as openings.json.
-- Daily job to automate: usajobs import, feed, copy openings.json into the repo root, commit, push.
+- Daily job: `scripts/daily_feed.sh` (usajobs import, feed, copy openings.json into the repo root, commit, push).
 
 ## 90-day route (gap plan, added)
 - `plan_template.html` builds `plan.html`. Inputs: `?job=<role id>&program=<id>&place=<id>&d=<7 Mangle Metric
