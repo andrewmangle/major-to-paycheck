@@ -1,0 +1,3844 @@
+{
+ "generated": "2026-11-13T09:08:23",
+ "count": 159,
+ "openings": [
+  {
+   "code": "#2001",
+   "id": "2001",
+   "title": "Associate FCA Examiner",
+   "company": "Farm Credit Administration",
+   "location": "5 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$18/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-13",
+   "apply_url": "https://www.usajobs.gov:443/job/890330700",
+   "majors": "Accounting; Finance",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0599"
+   ],
+   "roles": [
+    "staff-accountant",
+    "budget-analyst",
+    "revenue-agent",
+    "financial-analyst"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2003",
+   "id": "2003",
+   "title": "Student Volunteer (Unpaid Position)",
+   "company": "Office of Inspector General",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-13",
+   "apply_url": "https://www.usajobs.gov:443/job/892104000",
+   "majors": "All majors",
+   "class_standing": "Undergraduate",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2002",
+   "id": "2002",
+   "title": "Budget Technician",
+   "company": "Veterans Health Administration",
+   "location": "Albuquerque, NM",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$32/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-13",
+   "apply_url": "https://www.usajobs.gov:443/job/891897300",
+   "majors": "Accounting; Finance",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0561"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2004",
+   "id": "2004",
+   "title": "Data Engineer - Entry to Expert Level",
+   "company": "National Security Agency/Central Security Service",
+   "location": "Fort Meade, MD",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$42-$94/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-14",
+   "apply_url": "https://www.usajobs.gov:443/job/892706100",
+   "majors": "Computer Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1550"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2007",
+   "id": "2007",
+   "title": "Student Trainee (Information Technology)",
+   "company": "ARMY TRANSPORTATION",
+   "location": "Scott AFB, IL",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$18-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/891683900",
+   "majors": "Information Systems; Computer Science; Cybersecurity",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "2299"
+   ],
+   "roles": [
+    "systems-analyst",
+    "security-analyst",
+    "it-support",
+    "database-admin"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2006",
+   "id": "2006",
+   "title": "Data Analyst",
+   "company": "Animal and Plant Health Inspection Service",
+   "location": "Laurel, MD",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/891481500",
+   "majors": "All majors",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2008",
+   "id": "2008",
+   "title": "Data Scientist",
+   "company": "Animal and Plant Health Inspection Service",
+   "location": "Laurel, MD",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/891871500",
+   "majors": "All majors",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2010",
+   "id": "2010",
+   "title": "Cemetery Caretaker",
+   "company": "National Cemetery Administration",
+   "location": "Pensacola, FL",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$25-$29/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/892032400",
+   "majors": "All majors",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "4754"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2005",
+   "id": "2005",
+   "title": "Student Trainee (Human Capital Modernization Project)",
+   "company": "Office of Management and Budget",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/889832800",
+   "majors": "All majors",
+   "class_standing": "Current students",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2009",
+   "id": "2009",
+   "title": "Materials Handler",
+   "company": "Veterans Health Administration",
+   "location": "Shreveport, LA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$22-$25/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/892016300",
+   "majors": "All majors",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "6907"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2011",
+   "id": "2011",
+   "title": "Supervisory Interior Designer",
+   "company": "Veterans Health Administration",
+   "location": "Houston, TX",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$49-$64/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/892065100",
+   "majors": "Communications; Journalism; Graphic Design",
+   "class_standing": "Undergraduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1008"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2012",
+   "id": "2012",
+   "title": "Supply Technician",
+   "company": "Veterans Health Administration",
+   "location": "North Little Rock, AR",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$20-$25/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/892105800",
+   "majors": "Supply Chain Management; Logistics",
+   "class_standing": "High school; Undergraduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "2005"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2013",
+   "id": "2013",
+   "title": "Program Specialist",
+   "company": "Veterans Health Administration",
+   "location": "Saint Louis, MO",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$30-$39/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-16",
+   "apply_url": "https://www.usajobs.gov:443/job/892294100",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0303"
+   ],
+   "roles": [
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2015",
+   "id": "2015",
+   "title": "Student Trainee (Administration)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889056100",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2016",
+   "id": "2016",
+   "title": "Student Trainee (Administration)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889057300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2017",
+   "id": "2017",
+   "title": "Student Trainee (Administration)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889058200",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2018",
+   "id": "2018",
+   "title": "Student Trainee (Administration)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889058900",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2019",
+   "id": "2019",
+   "title": "Student Trainee (Administration)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889059300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2020",
+   "id": "2020",
+   "title": "Student Trainee (Program Technician)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889059500",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2021",
+   "id": "2021",
+   "title": "Student Trainee (Program Technician)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889060000",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2022",
+   "id": "2022",
+   "title": "Student Trainee (Program Technician)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889060300",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2023",
+   "id": "2023",
+   "title": "Student Trainee (Program Technician)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889061200",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2024",
+   "id": "2024",
+   "title": "Student Trainee (Program Technician)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889061700",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2025",
+   "id": "2025",
+   "title": "Student Trainee (Loan Specialist)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889061800",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2026",
+   "id": "2026",
+   "title": "Student Trainee (Loan Specialist)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889062900",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2027",
+   "id": "2027",
+   "title": "Student Trainee (Loan Specialist)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889063800",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2028",
+   "id": "2028",
+   "title": "Student Trainee (Loan Specialist)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889064700",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2029",
+   "id": "2029",
+   "title": "Student Trainee (Loan Specialist)",
+   "company": "Farm Service Agency",
+   "location": "20 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889065400",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1199"
+   ],
+   "roles": [
+    "financial-analyst",
+    "market-research",
+    "buyer"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2014",
+   "id": "2014",
+   "title": "Student Trainee (Soil Science)",
+   "company": "Natural Resources Conservation Service",
+   "location": "Hamilton Square, NJ",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$27/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889039100",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2030",
+   "id": "2030",
+   "title": "Student Trainee (Soil Conservation)",
+   "company": "Natural Resources Conservation Service",
+   "location": "41 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$27/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889084700",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2031",
+   "id": "2031",
+   "title": "Student Trainee (Biology)",
+   "company": "Natural Resources Conservation Service",
+   "location": "11 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889084800",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2032",
+   "id": "2032",
+   "title": "Student Trainee (Rangeland Management)",
+   "company": "Natural Resources Conservation Service",
+   "location": "14 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889084900",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2033",
+   "id": "2033",
+   "title": "Student Trainee (Forestry)",
+   "company": "Natural Resources Conservation Service",
+   "location": "2 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$27/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889085000",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2034",
+   "id": "2034",
+   "title": "Student Trainee (Engineering)",
+   "company": "Natural Resources Conservation Service",
+   "location": "22 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$27/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889085100",
+   "majors": "Engineering",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0899"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2035",
+   "id": "2035",
+   "title": "Student Trainee (Soil Conservation)",
+   "company": "Natural Resources Conservation Service",
+   "location": "29 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$28/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889085400",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2036",
+   "id": "2036",
+   "title": "Student Trainee (Agronomist)",
+   "company": "Natural Resources Conservation Service",
+   "location": "2 locations, WA",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889085700",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2037",
+   "id": "2037",
+   "title": "Student Trainee (Biology)",
+   "company": "Natural Resources Conservation Service",
+   "location": "3 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889085900",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2038",
+   "id": "2038",
+   "title": "Student Trainee (Forestry)",
+   "company": "Natural Resources Conservation Service",
+   "location": "5 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$28/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889087100",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2039",
+   "id": "2039",
+   "title": "Student Trainee (Engineering)",
+   "company": "Natural Resources Conservation Service",
+   "location": "23 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$25/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889087900",
+   "majors": "Engineering",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0899"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2040",
+   "id": "2040",
+   "title": "Student Trainee (Biology)",
+   "company": "Natural Resources Conservation Service",
+   "location": "19 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889090300",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2041",
+   "id": "2041",
+   "title": "Student Intern - Engineering",
+   "company": "Natural Resources Conservation Service",
+   "location": "22 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889091300",
+   "majors": "Engineering",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0899"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2042",
+   "id": "2042",
+   "title": "Student Intern - Soil Conservation",
+   "company": "Natural Resources Conservation Service",
+   "location": "61 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889092200",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2043",
+   "id": "2043",
+   "title": "Student Trainee (Rangeland Management)",
+   "company": "Natural Resources Conservation Service",
+   "location": "6 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889093200",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2044",
+   "id": "2044",
+   "title": "Student Intern- Agronomy",
+   "company": "Natural Resources Conservation Service",
+   "location": "2 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889093900",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2045",
+   "id": "2045",
+   "title": "Student Trainee (Soil Conservation)",
+   "company": "Natural Resources Conservation Service",
+   "location": "3 locations, PR",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889226900",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2046",
+   "id": "2046",
+   "title": "Student Trainee (Engineering)",
+   "company": "Natural Resources Conservation Service",
+   "location": "San Juan, PR",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889227000",
+   "majors": "Engineering",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0899"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2047",
+   "id": "2047",
+   "title": "Student Trainee (Forestry)",
+   "company": "Natural Resources Conservation Service",
+   "location": "5 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889227300",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2048",
+   "id": "2048",
+   "title": "Student Trainee (Soil Conservation)",
+   "company": "Natural Resources Conservation Service",
+   "location": "42 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$24/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889227500",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2049",
+   "id": "2049",
+   "title": "Student Trainee (Soil Science)",
+   "company": "Natural Resources Conservation Service",
+   "location": "Owensboro, KY",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889227600",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2050",
+   "id": "2050",
+   "title": "Student Trainee (Engineering)",
+   "company": "Natural Resources Conservation Service",
+   "location": "25 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$24/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889227800",
+   "majors": "Engineering",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0899"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2051",
+   "id": "2051",
+   "title": "Student Trainee (Soil Conservation)",
+   "company": "Natural Resources Conservation Service",
+   "location": "4 locations, MA",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$17-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/889541100",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0499"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2053",
+   "id": "2053",
+   "title": "Student Volunteer (Unpaid Position)",
+   "company": "Office of Inspector General",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/892509100",
+   "majors": "All majors",
+   "class_standing": "Undergraduate",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2052",
+   "id": "2052",
+   "title": "Interdisciplinary",
+   "company": "U.S. Army Corps of Engineers",
+   "location": "Norfolk, VA",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$25-$39/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-17",
+   "apply_url": "https://www.usajobs.gov:443/job/891482700",
+   "majors": "Geography; GIS; Biology; Environmental Science; Natural Resources",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0150",
+    "0401",
+    "0810",
+    "0854",
+    "1301",
+    "1515",
+    "1530",
+    "1550",
+    "1560"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2054",
+   "id": "2054",
+   "title": "Student Trainee",
+   "company": "Executive Office for U.S. Attorneys and the Office of the U.S. Attorneys",
+   "location": "Los Angeles, CA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$18/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov:443/job/890244400",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2055",
+   "id": "2055",
+   "title": "Student Trainee",
+   "company": "Executive Office for U.S. Attorneys and the Office of the U.S. Attorneys",
+   "location": "Santa Ana, CA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$18/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov:443/job/890245300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2056",
+   "id": "2056",
+   "title": "Student Trainee",
+   "company": "Executive Office for U.S. Attorneys and the Office of the U.S. Attorneys",
+   "location": "Riverside, CA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$18/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov:443/job/890247200",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2057",
+   "id": "2057",
+   "title": "Student Trainee (Program Analysis) - CES Intern",
+   "company": "Defense Information Systems Agency",
+   "location": "Fort Meade, MD",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$22-$44/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-19",
+   "apply_url": "https://www.usajobs.gov:443/job/891974200",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2059",
+   "id": "2059",
+   "title": "Student Cooperative (Paid) - Southern Area Field Office (SAFO)",
+   "company": "Office of the Inspector General, USPS",
+   "location": "Birmingham, AL",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$20-$24/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-20",
+   "apply_url": "https://www.usajobs.gov:443/job/891945400",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0303"
+   ],
+   "roles": [
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2058",
+   "id": "2058",
+   "title": "Student Trainee (Psychology)",
+   "company": "Veterans Health Administration",
+   "location": "Cincinnati, OH",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$31-$40/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-20",
+   "apply_url": "https://www.usajobs.gov:443/job/891879400",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0199"
+   ],
+   "roles": [
+    "economist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2060",
+   "id": "2060",
+   "title": "Supervisory Mobility Transportation Specialist",
+   "company": "Veterans Health Administration",
+   "location": "New Orleans, LA",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$36-$47/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-20",
+   "apply_url": "https://www.usajobs.gov:443/job/892450200",
+   "majors": "Transportation; Logistics",
+   "class_standing": "Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "2101"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2061",
+   "id": "2061",
+   "title": "DOI Office of the Secretary Internship Program - Spring 2027",
+   "company": "Office of the Secretary of the Interior",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-22",
+   "apply_url": "https://www.usajobs.gov:443/job/891062700",
+   "majors": "All majors",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2062",
+   "id": "2062",
+   "title": "Data Scientist Development Program (DSDP) - Entry to Expert Level",
+   "company": "National Security Agency/Central Security Service",
+   "location": "Fort Meade, MD",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$42-$94/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-23",
+   "apply_url": "https://www.usajobs.gov:443/job/892502700",
+   "majors": "Mathematics; Statistics; Data Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1560"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2063",
+   "id": "2063",
+   "title": "Medical Equipment Repairer",
+   "company": "Veterans Health Administration",
+   "location": "Little Rock, AR",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$31-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-23",
+   "apply_url": "https://www.usajobs.gov:443/job/892633000",
+   "majors": "All majors",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "4805"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2064",
+   "id": "2064",
+   "title": "Non-Law Student Volunteer",
+   "company": "Executive Office for U.S. Attorneys and the Office of the U.S. Attorneys",
+   "location": "Norfolk, VA",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-11-24",
+   "apply_url": "https://www.usajobs.gov:443/job/892310300",
+   "majors": "All majors",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2065",
+   "id": "2065",
+   "title": "Student Trainee (IT Specialist) Pathways Intern",
+   "company": "Office of Inspector General",
+   "location": "District of Columbia, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$28-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-24",
+   "apply_url": "https://www.usajobs.gov:443/job/892541100",
+   "majors": "Information Systems; Computer Science; Cybersecurity",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "2299"
+   ],
+   "roles": [
+    "systems-analyst",
+    "security-analyst",
+    "it-support",
+    "database-admin"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2066",
+   "id": "2066",
+   "title": "Student Trainee (Legal)",
+   "company": "Veterans Affairs, Inspector General",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$28-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-25",
+   "apply_url": "https://www.usajobs.gov:443/job/892661700",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0999"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2067",
+   "id": "2067",
+   "title": "Student Trainee (IHS Extern)",
+   "company": "Indian Health Service",
+   "location": "20 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$17-$47/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-02",
+   "apply_url": "https://www.usajobs.gov:443/job/891279900",
+   "majors": "Nursing; Public Health; Health Sciences",
+   "class_standing": "Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0699"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2068",
+   "id": "2068",
+   "title": "Airport Certification and Safety Inspector",
+   "company": "Federal Aviation Administration",
+   "location": "Fort Worth, TX",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$33-$73/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-03",
+   "apply_url": "https://www.usajobs.gov:443/job/892224900",
+   "majors": "Criminal Justice",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1801"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2069",
+   "id": "2069",
+   "title": "Volunteer Law Student Summer 2027",
+   "company": "Executive Office for U.S. Attorneys and the Office of the U.S. Attorneys",
+   "location": "2 locations, NM",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-09",
+   "apply_url": "https://www.usajobs.gov:443/job/890632800",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Current students",
+   "source": "USAJOBS",
+   "series": [
+    "0999"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2070",
+   "id": "2070",
+   "title": "Non-Law Volunteer Student Summer 2027",
+   "company": "Executive Office for U.S. Attorneys and the Office of the U.S. Attorneys",
+   "location": "2 locations, NM",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-09",
+   "apply_url": "https://www.usajobs.gov:443/job/890650800",
+   "majors": "All majors",
+   "class_standing": "High school; Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2071",
+   "id": "2071",
+   "title": "Student Trainee (Vocational Rehabilitation Counselor) Internship Program",
+   "company": "Veterans Benefits Administration",
+   "location": "39 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$24-$39/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-09",
+   "apply_url": "https://www.usajobs.gov:443/job/892051300",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0199"
+   ],
+   "roles": [
+    "economist"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2072",
+   "id": "2072",
+   "title": "Summer Intern (Legal Administrative Specialist) (Non-Tax)",
+   "company": "Internal Revenue Service",
+   "location": "7 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$31-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/886641800",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0901"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2073",
+   "id": "2073",
+   "title": "Honors Program Law Clerk (Non-Tax) (J.D. Students)",
+   "company": "Internal Revenue Service",
+   "location": "7 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$38-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/886646400",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0904"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2074",
+   "id": "2074",
+   "title": "Honors Program Law Clerk (Non-Tax) (LL.M. Students)",
+   "company": "Internal Revenue Service",
+   "location": "7 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$45-$70/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/886648400",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0904"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2075",
+   "id": "2075",
+   "title": "Summer Intern (Legal Administrative Specialist)",
+   "company": "Internal Revenue Service",
+   "location": "46 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/886742000",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0901"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2076",
+   "id": "2076",
+   "title": "Honors Program Law Clerk (J.D. Students)",
+   "company": "Internal Revenue Service",
+   "location": "46 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$36-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/886745900",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0904"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2077",
+   "id": "2077",
+   "title": "Honors Program Law Clerk (LL.M. Students)",
+   "company": "Internal Revenue Service",
+   "location": "46 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$43-$70/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/886748600",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0904"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2078",
+   "id": "2078",
+   "title": "Law Clerk (Chairman's Attorney Honors Program)",
+   "company": "Securities and Exchange Commission",
+   "location": "4 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$33-$57/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-11",
+   "apply_url": "https://www.usajobs.gov:443/job/892700600",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0904"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2079",
+   "id": "2079",
+   "title": "Summer 2027 SEC Scholars Business Program- RO (Volunteer)",
+   "company": "Securities and Exchange Commission",
+   "location": "10 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-14",
+   "apply_url": "https://www.usajobs.gov:443/job/891900000",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2080",
+   "id": "2080",
+   "title": "Summer 2027 SEC Scholars Business Program- HQ (Volunteer)",
+   "company": "Securities and Exchange Commission",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-14",
+   "apply_url": "https://www.usajobs.gov:443/job/891901100",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2081",
+   "id": "2081",
+   "title": "Summer 2027 SEC Scholars Legal Program- HQ (1L, 2L, 3L, or LL.M.) (Volunteer)",
+   "company": "Securities and Exchange Commission",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-14",
+   "apply_url": "https://www.usajobs.gov:443/job/891903400",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0999"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2082",
+   "id": "2082",
+   "title": "Summer 2027 SEC Scholars Legal Program- RO (1L, 2L, 3L, or LL.M.) (Volunteer)",
+   "company": "Securities and Exchange Commission",
+   "location": "10 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-14",
+   "apply_url": "https://www.usajobs.gov:443/job/891904500",
+   "majors": "Pre-Law; Paralegal Studies",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0999"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2083",
+   "id": "2083",
+   "title": "Student Volunteer",
+   "company": "Government Accountability Office",
+   "location": "Washington, DC",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-31",
+   "apply_url": "https://www.usajobs.gov:443/job/855084200",
+   "majors": "All majors",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2084",
+   "id": "2084",
+   "title": "Student Trainee (Compliance and Policy)",
+   "company": "Office of Personnel Management",
+   "location": "Washington, DC",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2026-12-31",
+   "apply_url": "https://www.usajobs.gov:443/job/880490300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Current students",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2085",
+   "id": "2085",
+   "title": "Social Worker (Inpatient Acute Psychiatry Unit)",
+   "company": "Veterans Health Administration",
+   "location": "Spokane, WA",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$32-$51/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-31",
+   "apply_url": "https://www.usajobs.gov:443/job/891411400",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0185"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2086",
+   "id": "2086",
+   "title": "Human Resources Specialist",
+   "company": "United States Space Force",
+   "location": "Patrick AFB, FL",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$47/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-01-13",
+   "apply_url": "https://www.usajobs.gov:443/job/854458300",
+   "majors": "Human Resources; Business Administration",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0201"
+   ],
+   "roles": [
+    "hr-specialist",
+    "training-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2087",
+   "id": "2087",
+   "title": "CISA - Scholarship for Service (SFS) Internship - Accepting Resumes, Transcripts, and SFS Agreements",
+   "company": "Cybersecurity and Infrastructure Security Agency",
+   "location": "12 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$13-$33/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-01-25",
+   "apply_url": "https://www.usajobs.gov:443/job/891497900",
+   "majors": "Information Systems; Computer Science; Cybersecurity",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "2299"
+   ],
+   "roles": [
+    "systems-analyst",
+    "security-analyst",
+    "it-support",
+    "database-admin"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2088",
+   "id": "2088",
+   "title": "Summer Undergraduate Research Fellowship (SURF) Program - Gaithersburg, MD (STEM and Related Fields)",
+   "company": "National Institute of Standards and Technology",
+   "location": "Gaithersburg, MD",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$6,390-$7,810 student stipend paid",
+   "pay_type": "Paid",
+   "deadline": "2027-01-26",
+   "apply_url": "https://www.usajobs.gov:443/job/889003500",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1399"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2089",
+   "id": "2089",
+   "title": "Summer Undergraduate Research Fellowship (SURF) Program - Boulder, CO (STEM Fields)",
+   "company": "National Institute of Standards and Technology",
+   "location": "Boulder, CO",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$6,390-$7,810 student stipend paid",
+   "pay_type": "Paid",
+   "deadline": "2027-01-26",
+   "apply_url": "https://www.usajobs.gov:443/job/889006800",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1399"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2090",
+   "id": "2090",
+   "title": "Student Trainee (Administration and Office Support)",
+   "company": "Interior, Bureau of Indian Affairs",
+   "location": "20 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$14-$23/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-01-29",
+   "apply_url": "https://www.usajobs.gov:443/job/878753900",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2091",
+   "id": "2091",
+   "title": "Summer High-school Intern Program (SHIP) -Gaithersburg, MD (Volunteer; STEM Fields)",
+   "company": "National Institute of Standards and Technology",
+   "location": "Gaithersburg, MD",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2027-02-09",
+   "apply_url": "https://www.usajobs.gov:443/job/891154500",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "High school; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1399"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2092",
+   "id": "2092",
+   "title": "Summer High-school Intern Program (SHIP) - Boulder, CO (Volunteer; STEM Fields)",
+   "company": "National Institute of Standards and Technology",
+   "location": "Boulder, CO",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2027-02-09",
+   "apply_url": "https://www.usajobs.gov:443/job/891154800",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "High school; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1399"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2093",
+   "id": "2093",
+   "title": "Logistics Management Specialist",
+   "company": "Air Combat Command",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$64/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-02-17",
+   "apply_url": "https://www.usajobs.gov:443/job/858098300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0346"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2094",
+   "id": "2094",
+   "title": "Logistics Management Specialist",
+   "company": "Air Combat Command",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$64/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-02-18",
+   "apply_url": "https://www.usajobs.gov:443/job/858283000",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0346"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2095",
+   "id": "2095",
+   "title": "Dietitian (Clinical)",
+   "company": "Veterans Health Administration",
+   "location": "Seattle, WA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$52/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-04-07",
+   "apply_url": "https://www.usajobs.gov:443/job/888076800",
+   "majors": "Nursing; Public Health; Health Sciences",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0630"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2096",
+   "id": "2096",
+   "title": "Child Development Specialist",
+   "company": "Air Force Materiel Command",
+   "location": "8 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$42/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-04-08",
+   "apply_url": "https://www.usajobs.gov:443/job/864512900",
+   "majors": "Education",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1701"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2097",
+   "id": "2097",
+   "title": "Graduate Student Research Assistant",
+   "company": "Judicial Branch Headquarters",
+   "location": "Anywhere in the U.S.",
+   "work_mode": "Remote",
+   "remote": true,
+   "pay": "$21-$24/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-05-26",
+   "apply_url": "https://www.usajobs.gov:443/job/869474800",
+   "majors": "Operations Research; Mathematics",
+   "class_standing": "Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1515"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2098",
+   "id": "2098",
+   "title": "Law Student Research Assistant",
+   "company": "Judicial Branch Headquarters",
+   "location": "Anywhere in the U.S.",
+   "work_mode": "Remote",
+   "remote": true,
+   "pay": "$21-$24/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-05-26",
+   "apply_url": "https://www.usajobs.gov:443/job/869475000",
+   "majors": "Mathematics; Statistics; Data Science",
+   "class_standing": "Current students",
+   "source": "USAJOBS",
+   "series": [
+    "1599"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2099",
+   "id": "2099",
+   "title": "Morale, Well-being, and Recreation Internship",
+   "company": "U.S. Coast Guard",
+   "location": "5 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$0-$18/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-08-11",
+   "apply_url": "https://www.usajobs.gov:443/job/880718800",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Undergraduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0189"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2100",
+   "id": "2100",
+   "title": "Student Trainee",
+   "company": "Air Force Civilian Career Training",
+   "location": "92 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$17-$25/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-08-31",
+   "apply_url": "https://www.usajobs.gov:443/job/882786200",
+   "majors": "All majors",
+   "class_standing": "High school; Undergraduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2101",
+   "id": "2101",
+   "title": "Air Traffic Control Specialist (Terminal)",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$53/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-16",
+   "apply_url": "https://www.usajobs.gov:443/job/885190700",
+   "majors": "Transportation; Logistics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "2152"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2102",
+   "id": "2102",
+   "title": "Air Traffic Control Specialist (Terminal)",
+   "company": "Air Force Civilian Career Training",
+   "location": "Moody AFB, GA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$47/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-21",
+   "apply_url": "https://www.usajobs.gov:443/job/885885600",
+   "majors": "Transportation; Logistics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "2152"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2103",
+   "id": "2103",
+   "title": "Program Analyst (Space Operations)",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885610500",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0343"
+   ],
+   "roles": [
+    "market-research",
+    "management-analyst",
+    "project-specialist",
+    "data-analyst"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2104",
+   "id": "2104",
+   "title": "Program Analyst (Space Operations)",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885611800",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0343"
+   ],
+   "roles": [
+    "market-research",
+    "management-analyst",
+    "project-specialist",
+    "data-analyst"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2105",
+   "id": "2105",
+   "title": "Program Analyst(Cyber Operations)",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885613300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0343"
+   ],
+   "roles": [
+    "market-research",
+    "management-analyst",
+    "project-specialist",
+    "data-analyst"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2106",
+   "id": "2106",
+   "title": "Program Analyst (Cyber Operations)",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885613800",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0343"
+   ],
+   "roles": [
+    "market-research",
+    "management-analyst",
+    "project-specialist",
+    "data-analyst"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2107",
+   "id": "2107",
+   "title": "Inventory Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$56/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885615000",
+   "majors": "Supply Chain Management; Logistics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "2010"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2108",
+   "id": "2108",
+   "title": "Inventory Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$56/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885615400",
+   "majors": "Supply Chain Management; Logistics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "2010"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2109",
+   "id": "2109",
+   "title": "Logistics Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "9 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$65/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885616700",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0346"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2110",
+   "id": "2110",
+   "title": "Logistics Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "9 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885619700",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0346"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2111",
+   "id": "2111",
+   "title": "Equipment Specialist (Electronics)",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$52/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885620100",
+   "majors": "Facilities Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1670"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2112",
+   "id": "2112",
+   "title": "Configuration and Data Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885620300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0301"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2113",
+   "id": "2113",
+   "title": "Configuration and Data Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/885620600",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0301"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2114",
+   "id": "2114",
+   "title": "Logistics Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "Hanscom AFB, MA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$63/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886365900",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0346"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2115",
+   "id": "2115",
+   "title": "Human Resources Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "16 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$54/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886726400",
+   "majors": "Human Resources; Business Administration",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0201"
+   ],
+   "roles": [
+    "hr-specialist",
+    "training-specialist"
+   ],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2116",
+   "id": "2116",
+   "title": "Management Analyst",
+   "company": "Air Force Civilian Career Training",
+   "location": "6 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$54/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886732200",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0343"
+   ],
+   "roles": [
+    "market-research",
+    "management-analyst",
+    "project-specialist",
+    "data-analyst"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2117",
+   "id": "2117",
+   "title": "Management Analyst",
+   "company": "Air Force Civilian Career Training",
+   "location": "4 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$64/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886753300",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0343"
+   ],
+   "roles": [
+    "market-research",
+    "management-analyst",
+    "project-specialist",
+    "data-analyst"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2118",
+   "id": "2118",
+   "title": "Work/Life Consultant",
+   "company": "Air Force Civilian Career Training",
+   "location": "11 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$54/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886769800",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0101"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2119",
+   "id": "2119",
+   "title": "Instructional Systems Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "4 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886774700",
+   "majors": "Education",
+   "class_standing": "Undergraduate",
+   "source": "USAJOBS",
+   "series": [
+    "1750"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2120",
+   "id": "2120",
+   "title": "General Education and Training Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$25-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886811400",
+   "majors": "Education",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1701"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2121",
+   "id": "2121",
+   "title": "Logistics Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$30-$63/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886814700",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0346"
+   ],
+   "roles": [
+    "logistician"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2122",
+   "id": "2122",
+   "title": "Youth Program Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$25-$54/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886831000",
+   "majors": "Education",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1701"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2123",
+   "id": "2123",
+   "title": "Child Development Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "8 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$54/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886837700",
+   "majors": "Education",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1701"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2124",
+   "id": "2124",
+   "title": "Prevention Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "5 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886896100",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0101"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2125",
+   "id": "2125",
+   "title": "Training and Curriculum Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "5 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$58/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/886911800",
+   "majors": "Education",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1701"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2126",
+   "id": "2126",
+   "title": "Mechanical Engineer",
+   "company": "Air Force Civilian Career Training",
+   "location": "Lackland AFB, TX",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$39-$62/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887032000",
+   "majors": "Mechanical Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0830"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2127",
+   "id": "2127",
+   "title": "Computer Engnineer",
+   "company": "Air Force Civilian Career Training",
+   "location": "Lackland AFB, TX",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$39-$62/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887032700",
+   "majors": "Computer Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0854"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2128",
+   "id": "2128",
+   "title": "Electronics Engineer",
+   "company": "Air Force Civilian Career Training",
+   "location": "Lackland AFB, TX",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$39-$62/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887033500",
+   "majors": "Electrical Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0855"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2129",
+   "id": "2129",
+   "title": "Operations Research Analyst",
+   "company": "Air Force Civilian Career Training",
+   "location": "Lackland AFB, TX",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$39-$62/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887034100",
+   "majors": "Operations Research; Mathematics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1515"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2130",
+   "id": "2130",
+   "title": "Computer Scientist",
+   "company": "Air Force Civilian Career Training",
+   "location": "Lackland AFB, TX",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$39-$62/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887034500",
+   "majors": "Computer Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1550"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2131",
+   "id": "2131",
+   "title": "Physical Scientist",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887071800",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1301"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2132",
+   "id": "2132",
+   "title": "Data Scientist",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887072000",
+   "majors": "Mathematics; Statistics; Data Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1560"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2133",
+   "id": "2133",
+   "title": "Engineer (Palace Acquire Intern)",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$53/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887072300",
+   "majors": "Engineering; Mechanical Engineering; Computer Engineering; Electrical Engineering; Aerospace Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0801",
+    "0806",
+    "0830",
+    "0840",
+    "0850",
+    "0854",
+    "0855",
+    "0858",
+    "0861",
+    "0893",
+    "0896"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2134",
+   "id": "2134",
+   "title": "Operations Research Analyst",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887073500",
+   "majors": "Operations Research; Mathematics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1515"
+   ],
+   "roles": [
+    "data-analyst"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2135",
+   "id": "2135",
+   "title": "Chemist",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887073800",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1320"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2136",
+   "id": "2136",
+   "title": "Computer Scientist",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887073900",
+   "majors": "Computer Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1550"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2137",
+   "id": "2137",
+   "title": "Biological Scientist (Environmental)",
+   "company": "Air Force Civilian Career Training",
+   "location": "45 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887075100",
+   "majors": "Biology; Environmental Science; Natural Resources",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0401"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2138",
+   "id": "2138",
+   "title": "Psychologist",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887075200",
+   "majors": "Psychology",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0180"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2139",
+   "id": "2139",
+   "title": "Mathematician",
+   "company": "Air Force Civilian Career Training",
+   "location": "45 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887077300",
+   "majors": "Mathematics; Statistics; Data Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1520"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2140",
+   "id": "2140",
+   "title": "Physicist",
+   "company": "Air Force Civilian Career Training",
+   "location": "44 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887077600",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1310"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2141",
+   "id": "2141",
+   "title": "Security Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "20 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$21-$37/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887326300",
+   "majors": "All majors",
+   "class_standing": "Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0080"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2142",
+   "id": "2142",
+   "title": "Computer Engineer",
+   "company": "Air Force Civilian Career Training",
+   "location": "20 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$37/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887326500",
+   "majors": "Computer Engineering",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0854"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2143",
+   "id": "2143",
+   "title": "Auditor",
+   "company": "Air Force Civilian Career Training",
+   "location": "4 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$25-$44/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/887758500",
+   "majors": "Accounting",
+   "class_standing": "Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0511"
+   ],
+   "roles": [
+    "staff-accountant"
+   ],
+   "places": []
+  },
+  {
+   "code": "#2144",
+   "id": "2144",
+   "title": "Foreign Affairs Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "3 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$25-$49/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/888491900",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0130"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2145",
+   "id": "2145",
+   "title": "Acquisition Program Management Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "14 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/888601400",
+   "majors": "Business; Supply Chain Management; Economics",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1101"
+   ],
+   "roles": [
+    "market-research",
+    "project-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2146",
+   "id": "2146",
+   "title": "Contract Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "72 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$24-$31/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/888632500",
+   "majors": "Business; Supply Chain Management; Finance",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1102"
+   ],
+   "roles": [
+    "buyer"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2147",
+   "id": "2147",
+   "title": "Contract Specialist",
+   "company": "Air Force Civilian Career Training",
+   "location": "72 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$30-$38/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/888633100",
+   "majors": "Business; Supply Chain Management; Finance",
+   "class_standing": "Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1102"
+   ],
+   "roles": [
+    "buyer"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2148",
+   "id": "2148",
+   "title": "Engineer (Place Acquire Intern)",
+   "company": "Air Force Civilian Career Training",
+   "location": "16 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/888775700",
+   "majors": "Civil Engineering; Mechanical Engineering; Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0810",
+    "0830",
+    "0850"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc"
+   ]
+  },
+  {
+   "code": "#2150",
+   "id": "2150",
+   "title": "Biological Scientist (Environmental)",
+   "company": "Air Force Civilian Career Training",
+   "location": "7 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/889460700",
+   "majors": "Biology; Environmental Science; Natural Resources; Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0401",
+    "0819"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2151",
+   "id": "2151",
+   "title": "Community Planner",
+   "company": "Air Force Civilian Career Training",
+   "location": "7 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$24-$48/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/889594400",
+   "majors": "All majors",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0020"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2152",
+   "id": "2152",
+   "title": "Physical Scientist (Environmental)",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$45/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/889734500",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "1301"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2153",
+   "id": "2153",
+   "title": "Architect",
+   "company": "Air Force Civilian Career Training",
+   "location": "5 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$44/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/889902200",
+   "majors": "Architecture",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0808"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2157",
+   "id": "2157",
+   "title": "General Engineer",
+   "company": "Air Force Civilian Career Training",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$39-$62/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/892745700",
+   "majors": "Engineering",
+   "class_standing": "Undergraduate; Graduate",
+   "source": "USAJOBS",
+   "series": [
+    "0801"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2156",
+   "id": "2156",
+   "title": "Student Trainee (Psychology) - Psychology Predoctoral Intern",
+   "company": "Bureau of Prisons/Federal Prison System",
+   "location": "42 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$31-$39/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/892243500",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0199"
+   ],
+   "roles": [
+    "economist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2149",
+   "id": "2149",
+   "title": "Semester of Service Student Volunteer",
+   "company": "U.S. Marshals Service",
+   "location": "95 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/888908900",
+   "majors": "All majors",
+   "class_standing": "Undergraduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2154",
+   "id": "2154",
+   "title": "Dietitian (Clinical)",
+   "company": "Veterans Health Administration",
+   "location": "Seattle, WA",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$27-$52/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/891445000",
+   "majors": "Nursing; Public Health; Health Sciences",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0630"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2155",
+   "id": "2155",
+   "title": "Social Worker (Primary Care)",
+   "company": "Veterans Health Administration",
+   "location": "Anchorage, AK",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$35-$56/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-09-30",
+   "apply_url": "https://www.usajobs.gov:443/job/891459500",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0185"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
+   "code": "#2159",
+   "id": "2159",
+   "title": "Student Volunteer",
+   "company": "National Labor Relations Board",
+   "location": "Washington, DC",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "Unpaid",
+   "pay_type": "Unpaid",
+   "deadline": "2027-11-02",
+   "apply_url": "https://www.usajobs.gov:443/job/891514100",
+   "majors": "All majors",
+   "class_standing": "Current students",
+   "source": "USAJOBS",
+   "series": [
+    "0099"
+   ],
+   "roles": [],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2158",
+   "id": "2158",
+   "title": "Neurosurgery - Nurse Practitioner APN",
+   "company": "Veterans Health Administration",
+   "location": "Saint Louis, MO",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$60-$90/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-11-02",
+   "apply_url": "https://www.usajobs.gov:443/job/891367100",
+   "majors": "Nursing; Public Health; Health Sciences",
+   "class_standing": "Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0610"
+   ],
+   "roles": [],
+   "places": []
+  }
+ ]
+}
