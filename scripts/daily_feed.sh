@@ -11,7 +11,8 @@
 set -euo pipefail
 
 SITE=/mnt/d/internfeed/major-to-paycheck
-SHORTS=/mnt/d/internfeed/internfeed-shorts/internfeed-shorts
+SHORTS=/mnt/d/internfeed/internfeed-shorts
+[ -f "$SHORTS/.env" ] || SHORTS=/mnt/d/internfeed/internfeed-shorts/internfeed-shorts  # older nested layout
 PY="$HOME/.venvs/careerroute-feed/bin/python"
 LOG_DIR="$HOME/.local/state/careerroute-feed"
 LOCK="$LOG_DIR/lock"

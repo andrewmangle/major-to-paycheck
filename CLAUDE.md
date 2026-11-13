@@ -81,7 +81,7 @@ title the emails need is missing from form/setup_signup_form.gs. If a title is e
 3. Collect student feedback from the class Slack thread; key test question before and after use:
    "Can you name two jobs you would apply for and what they pay?"
 4. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
-   paycheck") using the existing internfeed-shorts pipeline (D:\internfeed\internfeed-shorts\internfeed-shorts).
+   paycheck") using the existing internfeed-shorts pipeline (D:\internfeed\internfeed-shorts).
 5. Add College Scorecard earnings by major for Bowie State where published.
 6. Add "what a day looks like" or O*NET links so students can judge whether they would enjoy the job.
 7. Check that the USAJOBS links (k, l, hp=student parameters) filter as intended.
