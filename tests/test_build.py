@@ -99,6 +99,12 @@ class SharedDataTest(unittest.TestCase):
         for p in self.route["places"].values():
             self.assertTrue(p["states"])
 
+    def test_email_script_finds_the_sheet_from_any_project(self):
+        # getActive() is empty when the script is pasted into the form's project, not the Sheet's
+        gs = (ROOT / "apps-script" / "Code.gs").read_text()
+        self.assertIn("getDestinationId()", gs)
+        self.assertNotIn("const ss = SpreadsheetApp.getActive();", gs)
+
     def test_email_script_is_generated_with_site_urls(self):
         gs = (ROOT / "apps-script" / "Code.gs").read_text()
         self.assertNotIn("/*__ROUTE__*/null", gs)

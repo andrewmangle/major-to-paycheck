@@ -15,7 +15,8 @@ Student information never leaves your Google account.
 
 1. Open your form > Responses tab > **Link to Sheets** > create a new spreadsheet.
 2. In that spreadsheet: **Extensions > Apps Script**. Delete the starter code, paste all of
-   `apps-script/Code.gs`, and click Save.
+   `apps-script/Code.gs`, and click Save. (Pasting it into the form's own Apps Script
+   project also works: the script finds the linked response Sheet.)
 3. Choose **setupForm** in the function menu and click **Run**. Approve the permissions (it is your own
    script). Your form already has its questions, so setupForm only checks that every question the emails
    read is there (by exact title) and writes the result to a "Setup" tab. It changes nothing on the form.

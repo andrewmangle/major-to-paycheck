@@ -134,7 +134,8 @@ function checkForm_(form) {
   if (missingPlaces.length) {
     throw new Error('"' + Q.places + '" is missing these choices: ' + missingPlaces.join(', ') + '. Nothing was changed.');
   }
-  const ss = SpreadsheetApp.getActive();
+  let ss = null;
+  try { ss = ss_(); } catch (err) { /* not linked yet: log only */ }
   if (ss) {
     const sheet = getSheet_(ss, SHEETS.setup);
     sheet.clear();
@@ -149,7 +150,7 @@ function installTriggers() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
     if (['onSignup', 'sendWeeklyDigest'].indexOf(t.getHandlerFunction()) >= 0) ScriptApp.deleteTrigger(t);
   });
-  const ss = SpreadsheetApp.getActive();
+  const ss = ss_();
   ScriptApp.newTrigger('onSignup').forSpreadsheet(ss).onFormSubmit().create();
   ScriptApp.newTrigger('sendWeeklyDigest').timeBased()
     .onWeekDay(ScriptApp.WeekDay[CONFIG.DIGEST_DAY]).atHour(CONFIG.DIGEST_HOUR).create();
@@ -157,10 +158,23 @@ function installTriggers() {
 }
 
 // ------------------------------------------------------------- triggers
+/**
+ * The form's response spreadsheet. Works whether this script sits in that spreadsheet (Extensions >
+ * Apps Script) or in the form's own script project, where getActive() finds nothing.
+ */
+function ss_() {
+  const active = SpreadsheetApp.getActive();
+  if (active) return active;
+  let id;
+  try { id = FormApp.openById(CONFIG.FORM_ID).getDestinationId(); } catch (err) { id = ''; }
+  if (!id) throw new Error('The form is not linked to a Google Sheet. In the form, open Responses > Link to Sheets, then run this again.');
+  return SpreadsheetApp.openById(id);
+}
+
 function onSignup(e) {
   const sub = subscriberFromNamed_(e.namedValues);
   if (!sub.email) return;
-  const ss = SpreadsheetApp.getActive();
+  const ss = ss_();
   const feed = fetchFeed_();
   const plan = planFor(sub, feed.openings, []);
   deliver_(ss, sub, plan, { welcome: true, test: false });
@@ -171,7 +185,7 @@ function sendWeeklyDigest() { runDigest_(CONFIG.TEST_MODE); }
 function sendTestDigestToMe() { runDigest_(true, 3); }
 
 function runDigest_(test, limit) {
-  const ss = SpreadsheetApp.getActive();
+  const ss = ss_();
   const feed = fetchFeed_();
   const subs = readSubscribers_(ss);
   const sent = readSent_(ss);
