@@ -5,7 +5,7 @@ oesm25ma/
 __pycache__/
 *.pyc
 .DS_Store
-# Copies for the Claude artifact host; the published pages live in site/.
+# Copies for the Claude artifact host; the published pages live in the repo root.
 major-to-paycheck.html
 career-route.html
 # Patched score.html for the andrewmangle.com repo. It must not be served from this site.

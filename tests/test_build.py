@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = ROOT / "site"
+SITE = ROOT  # GitHub Pages serves the repo root
 sys.path.insert(0, str(ROOT))
 
 import build  # noqa: E402
@@ -28,10 +28,13 @@ class SiteTest(unittest.TestCase):
             self.assertIn("</html>", html, name)
             self.assertNotIn("/*__DATA__*/null", html, name)
 
-    def test_root_redirects_into_site(self):
-        html = (ROOT / "index.html").read_text()
-        self.assertIn('"site/paycheck.html" + h', html)  # old #program-place links keep working
-        self.assertIn('"site/"', html)
+    def test_old_links_keep_working(self):
+        # old #program-place links on the landing page go to the paycheck page
+        self.assertIn('location.replace("paycheck.html" + location.hash)', (ROOT / "index.html").read_text())
+        # old site/ addresses redirect to the root, keeping the query and hash
+        for name, target in (("index.html", "../"), ("paycheck.html", "../paycheck.html"), ("plan.html", "../plan.html")):
+            html = (ROOT / "site" / name).read_text()
+            self.assertIn('location.replace("%s" + location.search + location.hash)' % target, html, name)
 
     def test_hub_links_to_both_tools(self):
         hub = (SITE / "index.html").read_text()
@@ -44,7 +47,7 @@ class SiteTest(unittest.TestCase):
     def test_no_em_dashes(self):
         files = ["index.html", "template.html", "hub_template.html", "plan_template.html", "data.py", "build.py",
                  "README.md", "CLAUDE.md", "SETUP-EMAILS.md", "apps_script_template.gs", "form/setup_signup_form.gs",
-                 "site/index.html", "site/paycheck.html", "site/plan.html"]
+                 "paycheck.html", "plan.html", "site/index.html", "site/paycheck.html", "site/plan.html"]
         for f in files:
             self.assertNotIn(chr(0x2014), (ROOT / f).read_text(), f)
 
@@ -101,7 +104,7 @@ class SharedDataTest(unittest.TestCase):
         self.assertNotIn("/*__ROUTE__*/null", gs)
         site = re.search(r"SITE_URL: '([^']*)'", gs).group(1)
         feed = re.search(r"FEED_URL: '([^']*)'", gs).group(1)
-        self.assertTrue(site.startswith("https://") and site.endswith("/site/"), site)
+        self.assertTrue(site.startswith("https://") and site.endswith("/major-to-paycheck/"), site)
         self.assertEqual(feed, site + "openings.json")
 
 

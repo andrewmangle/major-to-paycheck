@@ -4,15 +4,15 @@ Free tools for Bowie State College of Business students, in three steps: Major t
 major take me, and can I live on it), the Mangle Metric (where do I stand), and Fed Intern Drop (what's open
 now), plus a 90-day route that ties them together.
 
-Live at https://andrewmangle.github.io/major-to-paycheck/ (redirects to `site/`).
+Live at https://andrewmangle.github.io/major-to-paycheck/ (GitHub Pages serves the repo root).
 
-- `site/index.html`: Career Route landing page. Built from `hub_template.html`.
-- `site/paycheck.html`: Major to Paycheck. Built from `template.html` and `data.py`.
-- `site/plan.html`: the 90-day route. Built from `plan_template.html`.
-- `site/careerroute.json`: programs, jobs, places and federal series, shared with the openings feed and emails.
-- `index.html`: redirect from the repo root into `site/` (GitHub Pages serves the root).
+- `index.html`: Career Route landing page. Built from `hub_template.html`.
+- `paycheck.html`: Major to Paycheck. Built from `template.html` and `data.py`.
+- `plan.html`: the 90-day route. Built from `plan_template.html`.
+- `careerroute.json`: programs, jobs, places and federal series, shared with the openings feed and emails.
+- `site/`: hand-written redirects so old `site/...` links still reach the pages in the root.
 - `data.py`: programs, roles, hiring advice, rents, tax rules, sign-up form settings, sources. Edit content here.
-- `build.py`: `python3 build.py` rebuilds everything in `site/` and `apps-script/Code.gs`.
+- `build.py`: `python3 build.py` rebuilds `index.html`, `paycheck.html`, `plan.html`, `careerroute.json` and `apps-script/Code.gs`.
 - `load_bls.py`: reads the BLS OEWS metro file (MSA_M2025_dl.xlsx from oesm25ma.zip) into `bls_wages.json`.
 - `apps_script_template.gs` -> `apps-script/Code.gs`: sign-up emails. See `SETUP-EMAILS.md`.
 - `form/setup_signup_form.gs`: the script that set up the live sign-up form.

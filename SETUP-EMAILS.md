@@ -3,7 +3,7 @@
 How it fits together:
 
 1. **Daily, on your computer (Docker):** `usajobs` pulls open federal internships, then `feed` writes
-   `openings.json`, matched to Career Route jobs and places. Copy it to `site/openings.json` and push to
+   `openings.json`, matched to Career Route jobs and places. Copy it to `openings.json` in the repo root and push to
    GitHub Pages. It contains only public listing data.
 2. **In Google (Apps Script):** your form's response Sheet runs `Code.gs`. Each new sign-up gets a welcome
    email right away with current matches. Every Monday, each subscriber gets new matches. Students who chose
@@ -32,11 +32,11 @@ Student information never leaves your Google account.
 ```powershell
 docker run --rm --env-file .env -v "${PWD}/data:/app/data" internfeed-shorts usajobs --close-missing
 docker run --rm -v "${PWD}/data:/app/data" -v "${PWD}/output:/app/output" internfeed-shorts feed
-copy output\feed\openings.json D:\internfeed\major-to-paycheck\site\openings.json
+copy output\feed\openings.json D:\internfeed\major-to-paycheck\openings.json
 ```
 
 Then commit and push the site. Claude Code can run these and the push for you on a schedule.
-Refresh `data/careerroute.json` from `major-to-paycheck/site/careerroute.json` whenever you change jobs in data.py.
+Refresh `data/careerroute.json` from `major-to-paycheck/careerroute.json` whenever you change jobs in data.py.
 
 ## Limits and upkeep
 

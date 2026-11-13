@@ -29,12 +29,13 @@ approach. Fed Intern Drop (@fedinterndrop) and the Mangle Metric (andrewmangle.c
   https://www.bls.gov/oes/special-requests/oesm25ma.zip). Re-run each spring when BLS publishes new data,
   then update the file name and "May 2025" wording.
 - `build.py`: computes pay, taxes, take-home, verdicts and links, injects JSON into the templates.
-  Writes `site/index.html` (Career Route), `site/paycheck.html`, `site/plan.html`, `site/careerroute.json`,
+  Writes `index.html` (Career Route), `paycheck.html`, `plan.html`, `careerroute.json` in the repo root,
   `apps-script/Code.gs`, and `major-to-paycheck.html` (fragment for the Claude artifact host, not committed).
   Run `python3 build.py` after any change.
 - `template.html`: the Major to Paycheck page (HTML, CSS tokens for light and dark themes, vanilla JS). No build tools.
-- `index.html` (repo root): a small redirect into `site/`. Hand-written, not built. Old links with a hash
-  (`#accounting-baltimore`) go to `site/paycheck.html`.
+- `site/`: hand-written redirect pages (index, paycheck, plan) so old `site/...` links reach the root pages,
+  keeping query and hash. Not built. Old root links with a hash (`#accounting-baltimore`) go to `paycheck.html`
+  (script in `hub_template.html`).
 - `form/setup_signup_form.gs`: Apps Script that created the live form's questions and printed the pre-fill numbers.
   Its PROGRAMS and PLACES lists must match data.py (tests check this).
 - `tests/`: `python3 -m unittest discover -s tests`. Run before every push.
@@ -42,8 +43,8 @@ approach. Fed Intern Drop (@fedinterndrop) and the Mangle Metric (andrewmangle.c
 ## Publishing
 This folder is the git repo for https://github.com/andrewmangle/major-to-paycheck (branch main).
 GitHub Pages serves the repo root, so the live addresses are:
-- Career Route: https://andrewmangle.github.io/major-to-paycheck/site/ (the bare repo address redirects here)
-- Major to Paycheck: .../site/paycheck.html, 90-day route: .../site/plan.html, feed: .../site/openings.json
+- Career Route: https://andrewmangle.github.io/major-to-paycheck/ (index.html)
+- Major to Paycheck: .../paycheck.html, 90-day route: .../plan.html, feed: .../openings.json
 Use git from WSL (Windows PowerShell has no git): `python3 build.py`, run the tests, commit, `git push`.
 
 ## How the numbers work
@@ -73,9 +74,9 @@ title the emails need is missing from form/setup_signup_form.gs. If a title is e
 
 ## Open tasks (in rough priority order)
 1. Set up emails with SETUP-EMAILS.md (Andrew runs it in Google; start with TEST_MODE on).
-2. REMIND ANDREW: the openings feed is not running yet, so `site/openings.json` does not exist and emails send
+2. REMIND ANDREW: the openings feed is not running yet, so `openings.json` does not exist and emails send
    search links only. Rebuild the internfeed-shorts Docker image, run `usajobs` then `feed`, copy
-   openings.json into site/, push, and decide whether to automate it daily. Bring this up once emails are set up.
+   openings.json into the repo root, push, and decide whether to automate it daily. Bring this up once emails are set up.
 3. Collect student feedback from the class Slack thread; key test question before and after use:
    "Can you name two jobs you would apply for and what they pay?"
 4. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
@@ -87,17 +88,17 @@ title the emails need is missing from form/setup_signup_form.gs. If a title is e
    Get explicit consent before any student data is shared with employers.
 
 ## Career Route (added)
-- `site/index.html` is now the Career Route landing page (three steps: Major to Paycheck, Mangle Metric,
-  Fed Intern Drop). Major to Paycheck moved to `site/paycheck.html` and links back. Source: `hub_template.html`.
-- `site/careerroute.json` maps programs, jobs, places, federal series and states. Used by the openings feed
+- `index.html` is now the Career Route landing page (three steps: Major to Paycheck, Mangle Metric,
+  Fed Intern Drop). Major to Paycheck moved to `paycheck.html` and links back. Source: `hub_template.html`.
+- `careerroute.json` maps programs, jobs, places, federal series and states. Used by the openings feed
   (internfeed-shorts `feed` command) and the email script.
 - Sign-up emails: `apps_script_template.gs` builds `apps-script/Code.gs` (Google Apps Script for the form's
   response Sheet). Setup steps in SETUP-EMAILS.md. Apps Script cannot call USAJOBS directly (it strips the
   User-Agent header USAJOBS requires), which is why openings come from the Docker feed as openings.json.
-- Daily job to automate: usajobs import, feed, copy openings.json into site/, commit, push.
+- Daily job to automate: usajobs import, feed, copy openings.json into the repo root, commit, push.
 
 ## 90-day route (gap plan, added)
-- `plan_template.html` builds `site/plan.html`. Inputs: `?job=<role id>&program=<id>&place=<id>&d=<7 Mangle Metric
+- `plan_template.html` builds `plan.html`. Inputs: `?job=<role id>&program=<id>&place=<id>&d=<7 Mangle Metric
   dimension scores, comma separated>`. Without inputs it shows a labeled example and opens the input panel.
 - Engine: ranks the 7 dimensions by percent of max (25, 20, 18, 18, 10, 7, 5), takes the 3 weakest, and builds
   Days 1-30 / 31-60 / 61-90 from dimension actions plus the job's "close the gap" items from data.py.

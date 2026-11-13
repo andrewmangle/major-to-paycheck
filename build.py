@@ -120,9 +120,8 @@ def build():
     fragment = template.replace("/*__DATA__*/null", json.dumps({**payload, "hubUrl": ""}, separators=(",", ":")))
     out = HERE / "major-to-paycheck.html"
     out.write_text(fragment)
-    # GitHub Pages site: Career Route landing page at index.html, Major to Paycheck at paycheck.html
-    site = HERE / "site"
-    site.mkdir(exist_ok=True)
+    # GitHub Pages serves the repo root: Career Route landing page at index.html, Major to Paycheck at paycheck.html
+    site = HERE
     paged = template.replace("/*__DATA__*/null", json.dumps({**payload, "hubUrl": "index.html"}, separators=(",", ":")))
     (site / "paycheck.html").write_text(full_page(paged))
     (site / "index.html").write_text(full_page((HERE / "hub_template.html").read_text()))

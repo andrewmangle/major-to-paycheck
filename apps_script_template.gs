@@ -15,8 +15,8 @@
 
 const CONFIG = {
   FORM_ID: '1iULh9xo4Mdg42vcvy0nBgVo9N4xvB6u-SmagbndvgYo',
-  SITE_URL: 'https://andrewmangle.github.io/major-to-paycheck/site/',   // Career Route on GitHub Pages, ending in a slash
-  FEED_URL: 'https://andrewmangle.github.io/major-to-paycheck/site/openings.json',   // missing: emails send search links only
+  SITE_URL: 'https://andrewmangle.github.io/major-to-paycheck/',   // Career Route on GitHub Pages, ending in a slash
+  FEED_URL: 'https://andrewmangle.github.io/major-to-paycheck/openings.json',   // missing: emails send search links only
   MANGLE_URL: 'https://andrewmangle.com/?utm_source=career-route&utm_medium=email&utm_campaign=bsu-cob',
   FROM_NAME: 'Career Route',
   REPLY_TO: '',   // optional address replies go to
