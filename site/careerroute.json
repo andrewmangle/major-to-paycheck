@@ -1,0 +1,351 @@
+{
+ "programs": [
+  {
+   "id": "accounting",
+   "name": "Accounting",
+   "roles": [
+    "staff-accountant",
+    "budget-analyst",
+    "revenue-agent"
+   ]
+  },
+  {
+   "id": "risk-management",
+   "name": "Risk Management & Insurance",
+   "roles": [
+    "claims-adjuster",
+    "underwriter",
+    "insurance-agent",
+    "risk-analyst"
+   ]
+  },
+  {
+   "id": "finance",
+   "name": "Banking & Finance",
+   "roles": [
+    "financial-analyst",
+    "loan-officer",
+    "financial-advisor"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "roles": [
+    "economist",
+    "market-research",
+    "financial-analyst",
+    "management-analyst"
+   ]
+  },
+  {
+   "id": "business-information-systems",
+   "name": "Business Information Systems",
+   "roles": [
+    "systems-analyst",
+    "security-analyst",
+    "it-support",
+    "project-specialist"
+   ]
+  },
+  {
+   "id": "data-analytics",
+   "name": "Data Analytics",
+   "roles": [
+    "data-analyst",
+    "database-admin",
+    "market-research",
+    "management-analyst"
+   ]
+  },
+  {
+   "id": "entrepreneurship",
+   "name": "Entrepreneurship & Small Business",
+   "roles": [
+    "ops-specialist",
+    "sales-rep",
+    "management-analyst"
+   ]
+  },
+  {
+   "id": "general-business",
+   "name": "General Business",
+   "roles": [
+    "ops-specialist",
+    "hr-specialist",
+    "logistician",
+    "buyer"
+   ]
+  },
+  {
+   "id": "management",
+   "name": "Management",
+   "roles": [
+    "hr-specialist",
+    "management-analyst",
+    "project-specialist",
+    "training-specialist"
+   ]
+  },
+  {
+   "id": "marketing",
+   "name": "Marketing",
+   "roles": [
+    "market-research",
+    "pr-specialist",
+    "sales-rep",
+    "wholesale-rep"
+   ]
+  }
+ ],
+ "roles": {
+  "staff-accountant": {
+   "title": "Staff Accountant / Audit Associate",
+   "search": "staff accountant",
+   "series": [
+    "0510",
+    "0511",
+    "0599"
+   ]
+  },
+  "budget-analyst": {
+   "title": "Budget Analyst",
+   "search": "budget analyst",
+   "series": [
+    "0560",
+    "0501",
+    "0599"
+   ]
+  },
+  "revenue-agent": {
+   "title": "Revenue Agent / Tax Examiner",
+   "search": "tax examiner",
+   "series": [
+    "0512",
+    "0526",
+    "0592",
+    "0599"
+   ]
+  },
+  "claims-adjuster": {
+   "title": "Claims Adjuster",
+   "search": "claims adjuster trainee",
+   "series": [
+    "0991",
+    "0993"
+   ]
+  },
+  "underwriter": {
+   "title": "Insurance Underwriter",
+   "search": "underwriter trainee",
+   "series": []
+  },
+  "insurance-agent": {
+   "title": "Insurance Sales Agent",
+   "search": "insurance agent",
+   "series": []
+  },
+  "risk-analyst": {
+   "title": "Risk Analyst",
+   "search": "risk analyst",
+   "series": [
+    "1160",
+    "0501"
+   ]
+  },
+  "financial-analyst": {
+   "title": "Financial Analyst",
+   "search": "financial analyst",
+   "series": [
+    "1160",
+    "0501",
+    "0599",
+    "1199"
+   ]
+  },
+  "loan-officer": {
+   "title": "Credit Analyst / Loan Officer",
+   "search": "credit analyst",
+   "series": [
+    "1165",
+    "0570"
+   ]
+  },
+  "financial-advisor": {
+   "title": "Financial Advisor",
+   "search": "financial advisor associate",
+   "series": []
+  },
+  "economist": {
+   "title": "Economist (federal entry)",
+   "search": "economist",
+   "series": [
+    "0110",
+    "0199"
+   ]
+  },
+  "market-research": {
+   "title": "Market Research Analyst",
+   "search": "market research analyst",
+   "series": [
+    "1101",
+    "0343",
+    "1199"
+   ]
+  },
+  "management-analyst": {
+   "title": "Management Analyst",
+   "search": "junior analyst",
+   "series": [
+    "0343",
+    "0301",
+    "0399"
+   ]
+  },
+  "systems-analyst": {
+   "title": "Systems Analyst",
+   "search": "systems analyst",
+   "series": [
+    "2210",
+    "2299"
+   ]
+  },
+  "security-analyst": {
+   "title": "Cybersecurity Analyst",
+   "search": "SOC analyst",
+   "series": [
+    "2210",
+    "2299"
+   ]
+  },
+  "it-support": {
+   "title": "IT Support Specialist",
+   "search": "IT support specialist",
+   "series": [
+    "2210",
+    "2299"
+   ]
+  },
+  "project-specialist": {
+   "title": "Project Coordinator",
+   "search": "project coordinator",
+   "series": [
+    "0343",
+    "0301",
+    "1101",
+    "0399"
+   ]
+  },
+  "data-analyst": {
+   "title": "Data Analyst / Data Scientist",
+   "search": "data analyst",
+   "series": [
+    "1530",
+    "1560",
+    "1515",
+    "1599",
+    "0343"
+   ]
+  },
+  "database-admin": {
+   "title": "Database Administrator",
+   "search": "junior database administrator",
+   "series": [
+    "2210",
+    "2299"
+   ]
+  },
+  "ops-specialist": {
+   "title": "Business Operations Specialist",
+   "search": "operations analyst",
+   "series": [
+    "0301",
+    "0399",
+    "0303"
+   ]
+  },
+  "sales-rep": {
+   "title": "Sales Representative",
+   "search": "sales development representative",
+   "series": []
+  },
+  "hr-specialist": {
+   "title": "Human Resources Specialist",
+   "search": "HR coordinator",
+   "series": [
+    "0201",
+    "0299"
+   ]
+  },
+  "logistician": {
+   "title": "Logistics Analyst",
+   "search": "logistics analyst",
+   "series": [
+    "0346",
+    "2003",
+    "2010",
+    "2099"
+   ]
+  },
+  "buyer": {
+   "title": "Buyer / Contract Specialist",
+   "search": "contract specialist",
+   "series": [
+    "1102",
+    "1105",
+    "1199"
+   ]
+  },
+  "training-specialist": {
+   "title": "Training and Development Specialist",
+   "search": "training coordinator",
+   "series": [
+    "1712",
+    "0201",
+    "1799"
+   ]
+  },
+  "pr-specialist": {
+   "title": "Public Relations Specialist",
+   "search": "public relations coordinator",
+   "series": [
+    "1035",
+    "1099"
+   ]
+  },
+  "wholesale-rep": {
+   "title": "Account Representative (B2B)",
+   "search": "account representative",
+   "series": []
+  }
+ },
+ "places": {
+  "baltimore": {
+   "name": "Baltimore",
+   "states": [
+    "MD"
+   ],
+   "linkedin": "Baltimore, Maryland",
+   "usajobs": "Baltimore, Maryland"
+  },
+  "dc": {
+   "name": "Washington, DC",
+   "states": [
+    "DC",
+    "MD",
+    "VA"
+   ],
+   "linkedin": "Washington, District of Columbia",
+   "usajobs": "Washington, District of Columbia"
+  },
+  "nova": {
+   "name": "Northern Virginia",
+   "states": [
+    "VA",
+    "DC"
+   ],
+   "linkedin": "Arlington, Virginia",
+   "usajobs": "Arlington, Virginia"
+  }
+ }
+}

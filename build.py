@@ -64,6 +64,13 @@ def pay_for(role, metro):
     return round(median * D.P25_RATIO / 500) * 500, "est", median
 
 
+def full_page(fragment):
+    head, body = fragment.split("</style>", 1)
+    return ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+            + head + "</style>\n</head>\n<body>" + body + "\n</body>\n</html>\n")
+
+
 def build():
     places = {}
     for pid, p in D.PLACES.items():
@@ -109,17 +116,45 @@ def build():
                "programs": D.PROGRAMS, "sources": D.SOURCES,
                "gs7": D.GS_2026_DCB["GS-7"], "signup": D.SIGNUP,
                "anyEstimate": any(b["start_src"] == "est" for r in roles.values() for b in r["by_place"].values())}
-    html = (HERE / "template.html").read_text()
-    html = html.replace("/*__DATA__*/null", json.dumps(payload, separators=(",", ":")))
+    template = (HERE / "template.html").read_text()
+    fragment = template.replace("/*__DATA__*/null", json.dumps({**payload, "hubUrl": ""}, separators=(",", ":")))
     out = HERE / "major-to-paycheck.html"
-    out.write_text(html)
-    # Standalone copy for GitHub Pages, which serves index.html from the repo root
-    # (the artifact host adds this skeleton itself)
-    head, body = html.split("</style>", 1)
-    (HERE / "index.html").write_text(
-        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
-        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        + head + "</style>\n</head>\n<body>" + body + "\n</body>\n</html>\n")
+    out.write_text(fragment)
+    # GitHub Pages site: Career Route landing page at index.html, Major to Paycheck at paycheck.html
+    site = HERE / "site"
+    site.mkdir(exist_ok=True)
+    paged = template.replace("/*__DATA__*/null", json.dumps({**payload, "hubUrl": "index.html"}, separators=(",", ":")))
+    (site / "paycheck.html").write_text(full_page(paged))
+    (site / "index.html").write_text(full_page((HERE / "hub_template.html").read_text()))
+
+    # 90-day route (gap plan) page
+    plan_data = {
+        "programs": [{"id": p["id"], "name": p["name"], "roles": p["roles"]} for p in D.PROGRAMS],
+        "places": {pid: {"name": p["name"]} for pid, p in D.PLACES.items()},
+        "roles": {rid: {"title": r["title"], "screens": r["screens"], "close": r["close"], "search": D.ROLES[rid]["search"],
+                        "by_place": {pid: {k: b[k] for k in ("start", "take_m", "rent", "left_m", "first", "linkedin", "usajobs")}
+                                     for pid, b in r["by_place"].items()}}
+                  for rid, r in roles.items()},
+        "signup": D.SIGNUP, "siteBase": "",
+        "mangleUrl": "https://andrewmangle.com/score.html?utm_source=career-route&utm_medium=plan&utm_campaign=bsu-cob",
+    }
+    plan_t = (HERE / "plan_template.html").read_text()
+    (site / "plan.html").write_text(full_page(plan_t.replace("/*__DATA__*/null", json.dumps({**plan_data, "hubUrl": "index.html"}, separators=(",", ":")))))
+
+    # Shared map of programs, jobs, places and federal series, used by the openings feed and the email script
+    route = {
+        "programs": [{"id": p["id"], "name": p["name"], "roles": p["roles"]} for p in D.PROGRAMS],
+        "roles": {rid: {"title": r["title"], "search": r["search"], "series": D.ROLE_SERIES.get(rid, [])}
+                  for rid, r in D.ROLES.items()},
+        "places": {pid: {"name": p["name"], "states": D.PLACE_STATES[pid], "linkedin": p["linkedin"],
+                         "usajobs": p["usajobs"]} for pid, p in D.PLACES.items()},
+    }
+    (site / "careerroute.json").write_text(json.dumps(route, indent=1))
+    gs = HERE / "apps_script_template.gs"
+    if gs.exists():
+        (HERE / "apps-script").mkdir(exist_ok=True)
+        (HERE / "apps-script" / "Code.gs").write_text(
+            gs.read_text().replace("/*__ROUTE__*/null", json.dumps(route, separators=(",", ":"))))
     return out, payload
 
 

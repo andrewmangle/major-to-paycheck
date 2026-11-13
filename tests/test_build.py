@@ -1,4 +1,4 @@
-"""Checks for the Major to Paycheck build. Run: python3 -m unittest discover -s tests"""
+"""Checks for the Career Route build. Run: python3 -m unittest discover -s tests"""
 import json
 import re
 import sys
@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+SITE = ROOT / "site"
 sys.path.insert(0, str(ROOT))
 
 import build  # noqa: E402
@@ -15,20 +16,36 @@ BLS = json.loads((ROOT / "bls_wages.json").read_text())
 METRO = {"baltimore": "BAL", "dc": "DCM", "nova": "DCM"}
 
 
-class BuildTest(unittest.TestCase):
+class SiteTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         _, cls.payload = build.build()
-        cls.html = (ROOT / "index.html").read_text()
 
-    def test_pages_copy_is_complete_html(self):
-        self.assertTrue(self.html.startswith("<!doctype html>"))
-        self.assertIn("</html>", self.html)
-        self.assertNotIn("/*__DATA__*/null", self.html)
+    def test_site_pages_are_complete_html(self):
+        for name in ("index.html", "paycheck.html", "plan.html"):
+            html = (SITE / name).read_text()
+            self.assertTrue(html.startswith("<!doctype html>"), name)
+            self.assertIn("</html>", html, name)
+            self.assertNotIn("/*__DATA__*/null", html, name)
+
+    def test_root_redirects_into_site(self):
+        html = (ROOT / "index.html").read_text()
+        self.assertIn('"site/paycheck.html" + h', html)  # old #program-place links keep working
+        self.assertIn('"site/"', html)
+
+    def test_hub_links_to_both_tools(self):
+        hub = (SITE / "index.html").read_text()
+        self.assertIn('href="paycheck.html"', hub)
+        self.assertIn('href="plan.html"', hub)
+
+    def test_paycheck_links_back_to_hub(self):
+        self.assertIn('"hubUrl":"index.html"', (SITE / "paycheck.html").read_text())
 
     def test_no_em_dashes(self):
-        for f in ("index.html", "template.html", "data.py", "build.py", "README.md", "CLAUDE.md",
-                  "form/setup_signup_form.gs"):
+        files = ["index.html", "template.html", "hub_template.html", "plan_template.html", "data.py", "build.py",
+                 "README.md", "CLAUDE.md", "SETUP-EMAILS.md", "apps_script_template.gs", "form/setup_signup_form.gs",
+                 "site/index.html", "site/paycheck.html", "site/plan.html"]
+        for f in files:
             self.assertNotIn(chr(0x2014), (ROOT / f).read_text(), f)
 
     def test_every_program_role_has_pay(self):
@@ -65,6 +82,29 @@ class BuildTest(unittest.TestCase):
                 self.assertEqual(b["left_m"], b["take_m"] - b["rent"])
 
 
+class SharedDataTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        build.build()
+        cls.route = json.loads((SITE / "careerroute.json").read_text())
+
+    def test_route_covers_every_program_role_and_place(self):
+        for prog in self.route["programs"]:
+            for rid in prog["roles"]:
+                self.assertIn(rid, self.route["roles"])
+        self.assertEqual(set(self.route["places"]), set(D.PLACES))
+        for p in self.route["places"].values():
+            self.assertTrue(p["states"])
+
+    def test_email_script_is_generated_with_site_urls(self):
+        gs = (ROOT / "apps-script" / "Code.gs").read_text()
+        self.assertNotIn("/*__ROUTE__*/null", gs)
+        site = re.search(r"SITE_URL: '([^']*)'", gs).group(1)
+        feed = re.search(r"FEED_URL: '([^']*)'", gs).group(1)
+        self.assertTrue(site.startswith("https://") and site.endswith("/site/"), site)
+        self.assertEqual(feed, site + "openings.json")
+
+
 class TaxTest(unittest.TestCase):
     def test_federal_2026_single(self):
         tx = build.taxes(60000, D.PLACES["dc"])  # taxable 43,900: 10% of 12,400 + 12% of 31,500
@@ -77,10 +117,11 @@ class TaxTest(unittest.TestCase):
 
 
 class SignupFormTest(unittest.TestCase):
-    """Pre-fill only works when the site sends values that exactly match the form's choices."""
+    """Pre-fill only works when the site sends values that exactly match the live form's choices."""
 
     @classmethod
     def setUpClass(cls):
+        build.build()
         gs = (ROOT / "form" / "setup_signup_form.gs").read_text()
         cls.form_programs = re.findall(r"'([^']+)'", re.search(r"const PROGRAMS = \[(.*?)\];", gs, re.S).group(1))
         cls.form_places = re.findall(r"'([^']+)'", re.search(r"const PLACES = \[(.*?)\];", gs, re.S).group(1))
@@ -94,12 +135,20 @@ class SignupFormTest(unittest.TestCase):
         for label in D.SIGNUP["place_choices"].values():
             self.assertIn(label, self.form_places)
 
-    def test_form_link_is_a_google_form(self):
-        self.assertRegex(D.SIGNUP["form"], r"^https://docs\.google\.com/forms/d/(e/)?[\w-]+/viewform$")
+    def test_form_link_is_the_published_form(self):
+        self.assertRegex(D.SIGNUP["form"], r"^https://docs\.google\.com/forms/d/e/[\w-]+/viewform$")
 
-    def test_entries_are_blank_or_entry_numbers(self):
+    def test_pre_fill_entries_are_wired(self):
         for key in ("program", "job", "place"):
-            self.assertRegex(D.SIGNUP["entries"][key], r"^(entry\.\d+)?$", key)
+            self.assertRegex(D.SIGNUP["entries"][key], r"^entry\.\d+$", key)
+        self.assertRegex(D.SIGNUP["entries"].get("source", ""), r"^(entry\.\d+)?$")
+
+    def test_every_page_uses_the_same_form(self):
+        hub = (SITE / "index.html").read_text()
+        forms = set(re.findall(r"https://docs\.google\.com/forms/[^\"'?\s]+", hub))
+        self.assertEqual(forms, {D.SIGNUP["form"]})
+        for name in ("paycheck.html", "plan.html"):
+            self.assertIn(json.dumps(D.SIGNUP["form"]), (SITE / name).read_text(), name)
 
 
 if __name__ == "__main__":

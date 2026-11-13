@@ -317,8 +317,44 @@ SOURCES = [
 # questions with any text, copy the link, and put each question's entry number here (e.g. "entry.123456789").
 # Program names must match the form's Program dropdown exactly, and place_choices must match the
 # "Where you want to live" checkboxes exactly, or Google ignores the pre-filled value.
+# The live form has no "How did you find us?" question yet, so source stays blank and is skipped.
 SIGNUP = {
     "form": "https://docs.google.com/forms/d/e/1FAIpQLSeABeH_Y0OGt_bCEpDfK-PBiWFByIU6as-FuPki9cR9a86Tdw/viewform",
-    "entries": {"program": "entry.1203642062", "job": "entry.989267743", "place": "entry.1971396936"},
+    "entries": {"program": "entry.1203642062", "job": "entry.989267743", "place": "entry.1971396936", "source": ""},
     "place_choices": {"baltimore": "Baltimore", "dc": "Washington DC", "nova": "Northern Virginia"},
 }
+
+# Federal occupational series that count as openings for each job (used to match USAJOBS listings).
+# Student trainee series end in 99 and cover a whole group.
+ROLE_SERIES = {
+    "staff-accountant": ["0510", "0511", "0599"],
+    "budget-analyst": ["0560", "0501", "0599"],
+    "revenue-agent": ["0512", "0526", "0592", "0599"],
+    "claims-adjuster": ["0991", "0993"],
+    "underwriter": [],
+    "insurance-agent": [],
+    "risk-analyst": ["1160", "0501"],
+    "financial-analyst": ["1160", "0501", "0599", "1199"],
+    "loan-officer": ["1165", "0570"],
+    "financial-advisor": [],
+    "economist": ["0110", "0199"],
+    "market-research": ["1101", "0343", "1199"],
+    "management-analyst": ["0343", "0301", "0399"],
+    "systems-analyst": ["2210", "2299"],
+    "security-analyst": ["2210", "2299"],
+    "it-support": ["2210", "2299"],
+    "project-specialist": ["0343", "0301", "1101", "0399"],
+    "data-analyst": ["1530", "1560", "1515", "1599", "0343"],
+    "database-admin": ["2210", "2299"],
+    "ops-specialist": ["0301", "0399", "0303"],
+    "sales-rep": [],
+    "hr-specialist": ["0201", "0299"],
+    "logistician": ["0346", "2003", "2010", "2099"],
+    "buyer": ["1102", "1105", "1199"],
+    "training-specialist": ["1712", "0201", "1799"],
+    "pr-specialist": ["1035", "1099"],
+    "wholesale-rep": [],
+}
+
+# Which listing locations count for each place. Remote listings always count.
+PLACE_STATES = {"baltimore": ["MD"], "dc": ["DC", "MD", "VA"], "nova": ["VA", "DC"]}

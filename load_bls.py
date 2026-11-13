@@ -1,7 +1,6 @@
 """Pull exact BLS wages for our occupations from the OEWS metro file into bls_wages.json.
-Usage: python3 load_bls.py path/to/MSA_M2025_dl.xlsx  (needs: pip install -r requirements.txt)"""
+Usage: python3 load_bls.py path/to/MSA_M2025_dl.xlsx"""
 import json, sys
-from pathlib import Path
 import pandas as pd
 import data as D
 
@@ -16,7 +15,7 @@ for _, r in df.iterrows():
         return int(float(v)) if v.replace(".", "").isdigit() else None
     out.setdefault(r["OCC_CODE"], {})[AREAS[r["AREA"]]] = {
         "p25": num(r["A_PCT25"]), "median": num(r["A_MEDIAN"]), "emp": num(r["TOT_EMP"]), "title": r["OCC_TITLE"]}
-json.dump(out, open(Path(__file__).parent / "bls_wages.json", "w"), indent=1)
+json.dump(out, open("bls_wages.json", "w"), indent=1)
 missing = [(s, m) for s in D.WAGES for m in AREAS.values() if not out.get(s, {}).get(m, {}).get("p25")]
 print(f"{len(out)} occupations loaded; missing p25: {missing or 'none'}")
 for s, v in sorted(out.items()):

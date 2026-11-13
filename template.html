@@ -44,6 +44,7 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid
 
 header.top { background: var(--surface); border-bottom: 1px solid var(--line); }
 header.top .wrap { padding-block: 28px 22px; display: grid; gap: 8px; }
+.back { font: 600 13px/1 var(--body); text-decoration: none; justify-self: start; }
 .eyebrow { font: 600 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 h1 { font: 800 clamp(30px, 6vw, 46px)/1.02 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
 .lede { margin: 0; color: var(--muted); max-width: 60ch; }
@@ -148,6 +149,7 @@ footer .wrap { padding-block: 16px 28px; font-size: 12.5px; color: var(--muted);
 
 <header class="top">
   <div class="wrap">
+    <a class="back" id="hub-link" href="#" hidden>← Career Route: all three steps</a>
     <div class="eyebrow">Bowie State College of Business · Prototype</div>
     <h1>Major to Paycheck</h1>
     <p class="lede">Pick your program and where you want to live. See the jobs it leads to, what they pay early on, what's left after taxes and rent, and what gets you hired.</p>
@@ -178,7 +180,7 @@ footer .wrap { padding-block: 16px 28px; font-size: 12.5px; color: var(--muted);
       <p>Knowing the roles is step one. See how ready you are for them, then go after the internships that lead there.</p>
       <div class="cta-row">
         <a class="btn" id="signup-main" href="#" target="_blank" rel="noopener">Get openings sent to you</a>
-        <a class="btn ghost" href="https://andrewmangle.com" target="_blank" rel="noopener">Get your free Mangle Metric score</a>
+        <a class="btn ghost" href="https://andrewmangle.com/?utm_source=major-to-paycheck&utm_medium=web&utm_campaign=bsu-cob" target="_blank" rel="noopener">Get your free Mangle Metric score</a>
         <a class="btn ghost" href="https://www.instagram.com/fedinterndrop/" target="_blank" rel="noopener">Follow @fedinterndrop for federal internships</a>
       </div>
     </section>
@@ -232,9 +234,18 @@ function signupUrl(job, placeName) {
   const f = DATA.signup, e = f.entries || {};
   const prog = DATA.programs.find((p) => p.id === state.program);
   const place = (f.place_choices || {})[state.place] || placeName;
-  const pairs = [[e.program, prog ? prog.name : ""], [e.job, job], [e.place, place]].filter(([k, v]) => k && v);
+  const pairs = [[e.program, prog ? prog.name : ""], [e.job, job], [e.place, place], [e.source, "Major to Paycheck"]].filter(([k, v]) => k && v);
   if (!pairs.length) return f.form;
   return f.form + "?usp=pp_url&" + pairs.map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+}
+
+function mangleUrl(rid, title, place) {
+  const prog = DATA.programs.find((p) => p.id === state.program);
+  const placeId = Object.keys(DATA.places).find((k) => DATA.places[k] === place);
+  const q = new URLSearchParams({ job: rid, jobtitle: title, program: state.program, programname: prog ? prog.name : "",
+    place: placeId || "", utm_source: "major-to-paycheck", utm_medium: "web", utm_campaign: "bsu-cob" });
+  if (/^https?:/.test(location.protocol) && !/claude\.ai$/.test(location.hostname)) q.set("plan", new URL("plan.html", location.href).href);
+  return "https://andrewmangle.com/score.html?" + q.toString();
 }
 
 function stubHTML(rid, r, b, place) {
@@ -275,6 +286,7 @@ function stubHTML(rid, r, b, place) {
     ${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}
     <div class="links">
       <a class="signup" href="${signupUrl(r.title, place.name)}" target="_blank" rel="noopener">Get openings for this job</a>
+      <a href="${mangleUrl(rid, r.title, place)}" target="_blank" rel="noopener">See where you stand for this job ↗</a>
       <a href="${b.linkedin}" target="_blank" rel="noopener">Entry-level jobs on LinkedIn ↗</a>
       <a href="${b.usajobs}" target="_blank" rel="noopener">Federal internships on USAJOBS ↗</a>
     </div>
@@ -336,6 +348,7 @@ function renderMethod() {
 }
 
 document.getElementById("signup-main").href = DATA.signup.form;
+if (DATA.hubUrl) { const h = document.getElementById("hub-link"); h.href = DATA.hubUrl; h.hidden = false; }
 setupControls();
 fromHash();
 renderMethod();

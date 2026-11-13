@@ -28,18 +28,22 @@ approach. Fed Intern Drop (@fedinterndrop) and the Mangle Metric (andrewmangle.c
 - `load_bls.py`: `python3 load_bls.py MSA_M2025_dl.xlsx` (from oesm25ma.zip at
   https://www.bls.gov/oes/special-requests/oesm25ma.zip). Re-run each spring when BLS publishes new data,
   then update the file name and "May 2025" wording.
-- `build.py`: computes pay, taxes, take-home, verdicts and links, injects JSON into template.html.
-  Writes `index.html` (complete page, served by GitHub Pages from the repo root) and
-  `major-to-paycheck.html` (fragment for the Claude artifact host, not committed).
+- `build.py`: computes pay, taxes, take-home, verdicts and links, injects JSON into the templates.
+  Writes `site/index.html` (Career Route), `site/paycheck.html`, `site/plan.html`, `site/careerroute.json`,
+  `apps-script/Code.gs`, and `major-to-paycheck.html` (fragment for the Claude artifact host, not committed).
   Run `python3 build.py` after any change.
-- `template.html`: the page (HTML, CSS tokens for light and dark themes, vanilla JS). No build tools.
-- `form/setup_signup_form.gs`: Apps Script that creates the sign-up form questions and prints the
-  pre-fill entry numbers. Its PROGRAMS and PLACES lists must match data.py (tests check this).
+- `template.html`: the Major to Paycheck page (HTML, CSS tokens for light and dark themes, vanilla JS). No build tools.
+- `index.html` (repo root): a small redirect into `site/`. Hand-written, not built. Old links with a hash
+  (`#accounting-baltimore`) go to `site/paycheck.html`.
+- `form/setup_signup_form.gs`: Apps Script that created the live form's questions and printed the pre-fill numbers.
+  Its PROGRAMS and PLACES lists must match data.py (tests check this).
 - `tests/`: `python3 -m unittest discover -s tests`. Run before every push.
 
 ## Publishing
 This folder is the git repo for https://github.com/andrewmangle/major-to-paycheck (branch main).
-GitHub Pages serves `index.html` from the root at https://andrewmangle.github.io/major-to-paycheck/.
+GitHub Pages serves the repo root, so the live addresses are:
+- Career Route: https://andrewmangle.github.io/major-to-paycheck/site/ (the bare repo address redirects here)
+- Major to Paycheck: .../site/paycheck.html, 90-day route: .../site/plan.html, feed: .../site/openings.json
 Use git from WSL (Windows PowerShell has no git): `python3 build.py`, run the tests, commit, `git push`.
 
 ## How the numbers work
@@ -54,20 +58,47 @@ Use git from WSL (Windows PowerShell has no git): `python3 build.py`, run the te
 - Rent: HUD FY2027 one-bedroom Fair Market Rent (Baltimore $1,625, Washington area $2,204).
 
 ## Sign-up form
-`SIGNUP` in data.py points to Andrew's Google Form. Card buttons pre-fill program, job and place.
-Running `form/setup_signup_form.gs` prints the form's published URL and each question's `entry.NNNN`
-number; put the URL in `SIGNUP["form"]` and the numbers in `SIGNUP["entries"]`, then rebuild.
-(Manual route: in Google Forms use "Get pre-filled link", fill those three questions, copy the link.)
+`SIGNUP` in data.py points to Andrew's published Google Form, and card buttons pre-fill program, job and place.
+The entry numbers are wired (from form/setup_signup_form.gs). Do not blank them when merging new files in.
 Pre-filled values must match the form's choices exactly: program names match the Program dropdown, and
 `SIGNUP["place_choices"]` maps each place to its checkbox label ("Washington DC", not "Washington, DC").
+The live form has no "How did you find us?" question, so `entries["source"]` is blank and skipped.
+
+Known mismatch to fix before setting up emails: `apps_script_template.gs` finds answers by question title,
+and several of its titles differ from the live form ("Your name" vs "Name", "Your program" vs "Program",
+"Job you are aiming for" vs "Job you're interested in", the handle question, and no source question). It also
+matches places by "Washington, DC" while the form says "Washington DC". Its setupForm refuses a non-blank form.
 
 ## Open tasks (in rough priority order)
-1. Collect student feedback from the class Slack thread; key test question before and after use:
+1. Align the email script with the live form (see above), then set up emails with SETUP-EMAILS.md.
+2. Commit mangle-metric/score.html to andrewmangle/andrewmangle.com (CAREER_ROUTE_PLAN_URL is already set).
+3. Collect student feedback from the class Slack thread; key test question before and after use:
    "Can you name two jobs you would apply for and what they pay?"
-2. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
+4. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
    paycheck") using the existing internfeed-shorts pipeline (D:\internfeed\internfeed-shorts\internfeed-shorts).
-3. Add College Scorecard earnings by major for Bowie State where published.
-4. Add "what a day looks like" or O*NET links so students can judge whether they would enjoy the job.
-5. Check that the USAJOBS links (k, l, hp=student parameters) filter as intended.
-6. Later: sponsored job cards for employers (World Bank first) and a licensed version for career centers.
+5. Add College Scorecard earnings by major for Bowie State where published.
+6. Add "what a day looks like" or O*NET links so students can judge whether they would enjoy the job.
+7. Check that the USAJOBS links (k, l, hp=student parameters) filter as intended.
+8. Later: sponsored job cards for employers (World Bank first) and a licensed version for career centers.
    Get explicit consent before any student data is shared with employers.
+
+## Career Route (added)
+- `site/index.html` is now the Career Route landing page (three steps: Major to Paycheck, Mangle Metric,
+  Fed Intern Drop). Major to Paycheck moved to `site/paycheck.html` and links back. Source: `hub_template.html`.
+- `site/careerroute.json` maps programs, jobs, places, federal series and states. Used by the openings feed
+  (internfeed-shorts `feed` command) and the email script.
+- Sign-up emails: `apps_script_template.gs` builds `apps-script/Code.gs` (Google Apps Script for the form's
+  response Sheet). Setup steps in SETUP-EMAILS.md. Apps Script cannot call USAJOBS directly (it strips the
+  User-Agent header USAJOBS requires), which is why openings come from the Docker feed as openings.json.
+- Daily job to automate: usajobs import, feed, copy openings.json into site/, commit, push.
+
+## 90-day route (gap plan, added)
+- `plan_template.html` builds `site/plan.html`. Inputs: `?job=<role id>&program=<id>&place=<id>&d=<7 Mangle Metric
+  dimension scores, comma separated>`. Without inputs it shows a labeled example and opens the input panel.
+- Engine: ranks the 7 dimensions by percent of max (25, 20, 18, 18, 10, 7, 5), takes the 3 weakest, and builds
+  Days 1-30 / 31-60 / 61-90 from dimension actions plus the job's "close the gap" items from data.py.
+  Always ends with "Retake the Mangle Metric". Checkmarks are saved in the browser only.
+- `mangle-metric/score.html` is a patched copy of andrewmangle.com's score page (see mangle-metric/CHANGES.md).
+  Commit it to the andrewmangle/andrewmangle.com repo. CAREER_ROUTE_PLAN_URL is set to the live plan page.
+  mangle-metric/ is git-ignored here so the copy is never served from this site.
+- Major to Paycheck cards link to the Mangle Metric with the target job and the plan URL.
