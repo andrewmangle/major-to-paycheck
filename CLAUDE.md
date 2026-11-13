@@ -62,13 +62,12 @@ Pre-filled values must match the form's choices exactly: program names match the
 `SIGNUP["place_choices"]` maps each place to its checkbox label ("Washington DC", not "Washington, DC").
 
 ## Open tasks (in rough priority order)
-1. Wire the form's pre-fill entry numbers once the form questions exist.
-2. Collect student feedback from the class Slack thread; key test question before and after use:
+1. Collect student feedback from the class Slack thread; key test question before and after use:
    "Can you name two jobs you would apply for and what they pay?"
-3. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
+2. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
    paycheck") using the existing internfeed-shorts pipeline (D:\internfeed\internfeed-shorts\internfeed-shorts).
-4. Add College Scorecard earnings by major for Bowie State where published.
-5. Add "what a day looks like" or O*NET links so students can judge whether they would enjoy the job.
-6. Check that the USAJOBS links (k, l, hp=student parameters) filter as intended.
-7. Later: sponsored job cards for employers (World Bank first) and a licensed version for career centers.
+3. Add College Scorecard earnings by major for Bowie State where published.
+4. Add "what a day looks like" or O*NET links so students can judge whether they would enjoy the job.
+5. Check that the USAJOBS links (k, l, hp=student parameters) filter as intended.
+6. Later: sponsored job cards for employers (World Bank first) and a licensed version for career centers.
    Get explicit consent before any student data is shared with employers.

@@ -318,7 +318,7 @@ SOURCES = [
 # Program names must match the form's Program dropdown exactly, and place_choices must match the
 # "Where you want to live" checkboxes exactly, or Google ignores the pre-filled value.
 SIGNUP = {
-    "form": "https://docs.google.com/forms/d/1iULh9xo4Mdg42vcvy0nBgVo9N4xvB6u-SmagbndvgYo/viewform",
-    "entries": {"program": "", "job": "", "place": ""},
+    "form": "https://docs.google.com/forms/d/e/1FAIpQLSeABeH_Y0OGt_bCEpDfK-PBiWFByIU6as-FuPki9cR9a86Tdw/viewform",
+    "entries": {"program": "entry.1203642062", "job": "entry.989267743", "place": "entry.1971396936"},
     "place_choices": {"baltimore": "Baltimore", "dc": "Washington DC", "nova": "Northern Virginia"},
 }
