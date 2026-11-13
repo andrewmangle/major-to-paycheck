@@ -71,12 +71,13 @@ function setUpSignupForm() {
     .setChoiceValues(['Yes', 'No'])
     .setRequired(true);
 
-  form.setAcceptingResponses(true);
+  // Forms made since 2025 must be published before they can take responses, so publish first.
   try {
-    form.setPublished(true);  // forms made since 2025 must be published to take responses
+    if (!form.isPublished()) form.setPublished(true);
   } catch (e) {
-    Logger.log('Could not publish automatically. Click Publish at the top of the form. (' + e + ')');
+    throw new Error('Click Publish at the top of the form, then run this again. (' + e.message + ')');
   }
+  form.setAcceptingResponses(true);
 
   // Build a pre-filled link with marker values, then read each question's entry number from it.
   const url = form.createResponse()
