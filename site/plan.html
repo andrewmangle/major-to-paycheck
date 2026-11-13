@@ -251,6 +251,18 @@ function storageKey() { return "route:" + state.job + ":" + state.place; }
 function loadDone() { try { return JSON.parse(localStorage.getItem(storageKey()) || "{}"); } catch (_) { return {}; } }
 function saveDone(v) { try { localStorage.setItem(storageKey(), JSON.stringify(v)); } catch (_) {} }
 
+// Sign-up link with program, job and place filled in. Values must match the form's choices exactly,
+// so places use their form labels ("Washington DC").
+function signupUrl(job) {
+  const f = DATA.signup, e = f.entries || {};
+  const prog = DATA.programs.find((p) => p.id === state.program);
+  const place = (f.place_choices || {})[state.place] || (DATA.places[state.place] || {}).name || "";
+  const pairs = [[e.program, prog ? prog.name : ""], [e.job, job], [e.place, place], [e.source, "Career Route"]]
+    .filter(([k, v]) => k && v);
+  if (!pairs.length) return f.form;
+  return f.form + "?usp=pp_url&" + pairs.map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+}
+
 function render() {
   const P = buildPlan();
   const total = state.d.reduce((a, n) => a + (Number(n) || 0), 0);
@@ -259,7 +271,7 @@ function render() {
   $("#lede").textContent = `Built from your Mangle Metric scores and what employers look for in ${job} roles in ${P.place.name}. Your three weakest areas come first.`;
   $("#example-tag").hidden = !state.example;
 
-  const signup = DATA.signup.form;
+  const signup = signupUrl(job);
   $("#strip").innerHTML = `
     <div class="box dest"><div class="kind">Destination</div><h2>${esc(job)} · ${esc(P.place.name)}</h2>
       <div class="big">${usd(P.b.start)}</div>

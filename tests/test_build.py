@@ -143,6 +143,24 @@ class SignupFormTest(unittest.TestCase):
             self.assertRegex(D.SIGNUP["entries"][key], r"^entry\.\d+$", key)
         self.assertRegex(D.SIGNUP["entries"].get("source", ""), r"^(entry\.\d+)?$")
 
+    def test_email_script_titles_match_the_form(self):
+        form_gs = (ROOT / "form" / "setup_signup_form.gs").read_text()
+        form_titles = set(re.findall(r"find_\(form, '([^']+)'", form_gs))
+        email_gs = (ROOT / "apps_script_template.gs").read_text()
+        q = dict(re.findall(r"^\s+(\w+): '([^']+)'", re.search(r"const Q = \{(.*?)\};", email_gs, re.S).group(1), re.M))
+        needed = re.findall(r"'(\w+)'", re.search(r"const NEEDED = \[(.*?)\];", email_gs, re.S).group(1))
+        for key in needed:
+            self.assertIn(q[key], form_titles, key)
+
+    def test_email_script_places_use_form_labels(self):
+        route = json.loads((SITE / "careerroute.json").read_text())
+        self.assertEqual({pid: p["form"] for pid, p in route["places"].items()}, D.SIGNUP["place_choices"])
+
+    def test_plan_page_pre_fills_the_form(self):
+        tpl = (ROOT / "plan_template.html").read_text()
+        self.assertIn("const signup = signupUrl(job);", tpl)
+        self.assertIn("place_choices", tpl)
+
     def test_every_page_uses_the_same_form(self):
         hub = (SITE / "index.html").read_text()
         forms = set(re.findall(r"https://docs\.google\.com/forms/[^\"'?\s]+", hub))

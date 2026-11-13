@@ -4,10 +4,11 @@
  * Where it runs: Google Apps Script, under your Google account. Student information stays in your
  * Google Sheet. The only thing it reads from outside is openings.json, which holds public listings.
  *
- * Setup (one time, about 10 minutes): see SETUP.md. In short:
+ * Setup (one time, about 10 minutes): see SETUP-EMAILS.md. In short:
  *   1. Open the form, Responses tab, "Link to Sheets", create a new sheet. In that sheet open
  *      Extensions > Apps Script, paste this whole file, save.
- *   2. Run setupForm once (approve the permissions). It adds the questions to your blank form.
+ *   2. Run setupForm once (approve the permissions). On a form that already has its questions it only
+ *      checks them and writes the Setup tab. On a blank form it adds the questions.
  *   3. Run installTriggers once. Welcome emails start on the next sign-up; digests go out weekly.
  *   4. Leave TEST_MODE true until a test digest to yourself looks right (run sendTestDigestToMe).
  */
@@ -27,30 +28,35 @@ const CONFIG = {
 
 const ROUTE = /*__ROUTE__*/null;
 
-// Question titles. setupForm creates these; everything else finds answers by these titles.
+// Question titles. Everything finds answers by these exact titles, so they match the live form
+// (built by form/setup_signup_form.gs). The job title uses a curly apostrophe, as on the form.
+// The live form has no source question; answers to it read as blank.
 const Q = {
-  name: 'Your name',
+  name: 'Name',
   email: 'Email',
-  program: 'Your program',
-  job: 'Job you are aiming for',
+  program: 'Program',
+  job: 'Job you’re interested in',
   places: 'Where you want to live',
   standing: 'Class standing',
   grad: 'Expected graduation (month and year)',
   wants: 'What should we send you?',
   channel: 'Best way to reach you',
-  handle: 'Instagram handle or phone number (only if not email)',
+  handle: 'Instagram handle or phone number',
   share: 'Can we share your profile with employers hiring for this job?',
   source: 'How did you find us?'
 };
+// Questions the emails read. setupForm checks that an existing form has all of them.
+const NEEDED = ['name', 'email', 'program', 'job', 'places', 'wants', 'channel', 'handle', 'share'];
+
+/** The checkbox label for a place on the form (e.g. "Washington DC"), which can differ from its display name. */
+function placeLabel_(id) { return ROUTE.places[id].form || ROUTE.places[id].name; }
 const ANYWHERE = 'Open to anywhere';
 const SHEETS = { sent: 'Sent log', dm: 'DM queue', unsub: 'Unsubscribed', setup: 'Setup' };
 
 // ------------------------------------------------------------------ setup
 function setupForm() {
   const form = FormApp.openById(CONFIG.FORM_ID);
-  if (form.getItems().length > 0) {
-    throw new Error('This form already has questions. setupForm only fills a blank form, so nothing was changed.');
-  }
+  if (form.getItems().length > 0) return checkForm_(form);
   form.setTitle('Career Route: get openings for your target job');
   form.setDescription('Tell us the job and city you picked in Major to Paycheck. We will email you matching ' +
     'internships and entry-level openings. We share your profile with an employer only if you say yes below. ' +
@@ -65,7 +71,7 @@ function setupForm() {
   form.addTextItem().setTitle(Q.job)
     .setHelpText('Copy the job title from Major to Paycheck, e.g. Staff Accountant / Audit Associate.');
   form.addCheckboxItem().setTitle(Q.places).setRequired(true)
-    .setChoiceValues(Object.keys(ROUTE.places).map(function (k) { return ROUTE.places[k].name; }).concat([ANYWHERE]));
+    .setChoiceValues(Object.keys(ROUTE.places).map(placeLabel_).concat([ANYWHERE]));
   form.addMultipleChoiceItem().setTitle(Q.standing)
     .setChoiceValues(['Freshman', 'Sophomore', 'Junior', 'Senior', 'Graduate student', 'Recent graduate']);
   form.addTextItem().setTitle(Q.grad);
@@ -87,7 +93,7 @@ function setupForm() {
   // Pre-fill numbers for the Major to Paycheck buttons
   const byTitle = {};
   form.getItems().forEach(function (it) { byTitle[it.getTitle()] = it; });
-  const firstPlace = ROUTE.places[Object.keys(ROUTE.places)[0]].name;
+  const firstPlace = placeLabel_(Object.keys(ROUTE.places)[0]);
   const samples = [
     ['program', byTitle[Q.program].asListItem().createResponse(ROUTE.programs[0].name)],
     ['job', byTitle[Q.job].asTextItem().createResponse('JOB')],
@@ -106,6 +112,37 @@ function setupForm() {
   sheet.appendRow(['Pre-fill numbers for data.py SIGNUP["entries"]', JSON.stringify(entries)]);
   Logger.log('Form link: ' + form.getPublishedUrl());
   Logger.log('Pre-fill numbers: ' + JSON.stringify(entries));
+}
+
+/**
+ * For a form that already has its questions: confirm every question the emails read is there, and that the
+ * place checkboxes match. Changes nothing on the form. Writes the result to the Setup tab.
+ */
+function checkForm_(form) {
+  const items = form.getItems();
+  const titles = items.map(function (it) { return it.getTitle(); });
+  const missing = NEEDED.filter(function (k) { return titles.indexOf(Q[k]) < 0; })
+    .map(function (k) { return '"' + Q[k] + '"'; });
+  if (missing.length) {
+    throw new Error('The form is missing questions the emails need: ' + missing.join(', ') +
+      '. Add them with these exact titles, or update Q at the top of this script. Nothing was changed.');
+  }
+  const placeItem = items.filter(function (it) { return it.getTitle() === Q.places; })[0];
+  const choices = placeItem.asCheckboxItem().getChoices().map(function (c) { return c.getValue(); });
+  const missingPlaces = Object.keys(ROUTE.places).map(placeLabel_).concat([ANYWHERE])
+    .filter(function (label) { return choices.indexOf(label) < 0; });
+  if (missingPlaces.length) {
+    throw new Error('"' + Q.places + '" is missing these choices: ' + missingPlaces.join(', ') + '. Nothing was changed.');
+  }
+  const ss = SpreadsheetApp.getActive();
+  if (ss) {
+    const sheet = getSheet_(ss, SHEETS.setup);
+    sheet.clear();
+    sheet.appendRow(['Form link', form.getPublishedUrl()]);
+    sheet.appendRow(['Form check', 'Every question the emails need is on the form. Nothing was changed.']);
+    sheet.appendRow(['Source question', titles.indexOf(Q.source) >= 0 ? 'Present' : 'Not on the form (optional)']);
+  }
+  Logger.log('Form check passed. Every question the emails need is on the form. Nothing was changed.');
 }
 
 function installTriggers() {
@@ -154,7 +191,7 @@ function runDigest_(test, limit) {
 function placeIdsFor(sub) {
   const ids = Object.keys(ROUTE.places);
   if (!sub.places.length || sub.places.indexOf(ANYWHERE) >= 0) return ids;
-  const out = ids.filter(function (id) { return sub.places.indexOf(ROUTE.places[id].name) >= 0; });
+  const out = ids.filter(function (id) { return sub.places.indexOf(placeLabel_(id)) >= 0; });
   return out.length ? out : ids;
 }
 
@@ -331,9 +368,9 @@ function splitMulti_(v) { return String(v || '').split(',').map(function (s) { r
 
 function subscriberFromNamed_(nv) {
   const get = function (t) { return nv[t] ? String(nv[t][0] || '').trim() : ''; };
-  // Checkbox answers come back comma separated; "Washington, DC" contains a comma, so rejoin known names
+  // Checkbox answers come back comma separated, so look for each known form label in the raw answer
   const raw = get(Q.places);
-  const known = Object.keys(ROUTE.places).map(function (k) { return ROUTE.places[k].name; }).concat([ANYWHERE]);
+  const known = Object.keys(ROUTE.places).map(placeLabel_).concat([ANYWHERE]);
   const places = known.filter(function (n) { return raw.indexOf(n) >= 0; });
   return { name: get(Q.name), email: get(Q.email), program: get(Q.program), job: get(Q.job), places: places,
            channel: get(Q.channel) || 'Email', handle: get(Q.handle), share: get(Q.share), wants: splitMulti_(get(Q.wants)) };

@@ -64,14 +64,18 @@ Pre-filled values must match the form's choices exactly: program names match the
 `SIGNUP["place_choices"]` maps each place to its checkbox label ("Washington DC", not "Washington, DC").
 The live form has no "How did you find us?" question, so `entries["source"]` is blank and skipped.
 
-Known mismatch to fix before setting up emails: `apps_script_template.gs` finds answers by question title,
-and several of its titles differ from the live form ("Your name" vs "Name", "Your program" vs "Program",
-"Job you are aiming for" vs "Job you're interested in", the handle question, and no source question). It also
-matches places by "Washington, DC" while the form says "Washington DC". Its setupForm refuses a non-blank form.
+The 90-day route's "Send me openings" button pre-fills the same three answers.
+
+The email script (`apps_script_template.gs`) finds answers by exact question title. Its `Q` titles match the
+live form, and places match by form label (`careerroute.json` places carry `form`, from `place_choices`).
+On a form that already has questions, `setupForm` only checks them and writes the Setup tab. Tests fail if a
+title the emails need is missing from form/setup_signup_form.gs. If a title is edited on the form, update both.
 
 ## Open tasks (in rough priority order)
-1. Align the email script with the live form (see above), then set up emails with SETUP-EMAILS.md.
-2. Commit mangle-metric/score.html to andrewmangle/andrewmangle.com (CAREER_ROUTE_PLAN_URL is already set).
+1. Set up emails with SETUP-EMAILS.md (Andrew runs it in Google; start with TEST_MODE on).
+2. REMIND ANDREW: the openings feed is not running yet, so `site/openings.json` does not exist and emails send
+   search links only. Rebuild the internfeed-shorts Docker image, run `usajobs` then `feed`, copy
+   openings.json into site/, push, and decide whether to automate it daily. Bring this up once emails are set up.
 3. Collect student feedback from the class Slack thread; key test question before and after use:
    "Can you name two jobs you would apply for and what they pay?"
 4. Video template: one short per program, place and job ("Accounting in Baltimore: here's your first
@@ -99,6 +103,6 @@ matches places by "Washington, DC" while the form says "Washington DC". Its setu
   Days 1-30 / 31-60 / 61-90 from dimension actions plus the job's "close the gap" items from data.py.
   Always ends with "Retake the Mangle Metric". Checkmarks are saved in the browser only.
 - `mangle-metric/score.html` is a patched copy of andrewmangle.com's score page (see mangle-metric/CHANGES.md).
-  Commit it to the andrewmangle/andrewmangle.com repo. CAREER_ROUTE_PLAN_URL is set to the live plan page.
+  Published to the andrewmangle/andrewmangle.com repo (score.html). CAREER_ROUTE_PLAN_URL points at the live plan page.
   mangle-metric/ is git-ignored here so the copy is never served from this site.
 - Major to Paycheck cards link to the Mangle Metric with the target job and the plan URL.

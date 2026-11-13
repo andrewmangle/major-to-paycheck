@@ -146,7 +146,8 @@ def build():
         "programs": [{"id": p["id"], "name": p["name"], "roles": p["roles"]} for p in D.PROGRAMS],
         "roles": {rid: {"title": r["title"], "search": r["search"], "series": D.ROLE_SERIES.get(rid, [])}
                   for rid, r in D.ROLES.items()},
-        "places": {pid: {"name": p["name"], "states": D.PLACE_STATES[pid], "linkedin": p["linkedin"],
+        "places": {pid: {"name": p["name"], "form": D.SIGNUP.get("place_choices", {}).get(pid, p["name"]),
+                         "states": D.PLACE_STATES[pid], "linkedin": p["linkedin"],
                          "usajobs": p["usajobs"]} for pid, p in D.PLACES.items()},
     }
     (site / "careerroute.json").write_text(json.dumps(route, indent=1))

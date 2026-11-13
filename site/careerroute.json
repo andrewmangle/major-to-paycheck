@@ -322,6 +322,7 @@
  "places": {
   "baltimore": {
    "name": "Baltimore",
+   "form": "Baltimore",
    "states": [
     "MD"
    ],
@@ -330,6 +331,7 @@
   },
   "dc": {
    "name": "Washington, DC",
+   "form": "Washington DC",
    "states": [
     "DC",
     "MD",
@@ -340,6 +342,7 @@
   },
   "nova": {
    "name": "Northern Virginia",
+   "form": "Northern Virginia",
    "states": [
     "VA",
     "DC"

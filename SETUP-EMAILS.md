@@ -17,13 +17,14 @@ Student information never leaves your Google account.
 2. In that spreadsheet: **Extensions > Apps Script**. Delete the starter code, paste all of
    `apps-script/Code.gs`, and click Save.
 3. Choose **setupForm** in the function menu and click **Run**. Approve the permissions (it is your own
-   script). It adds 12 questions to your blank form and writes the pre-fill numbers to a "Setup" tab.
-4. Copy the pre-fill numbers from the Setup tab into `data.py` (`SIGNUP["entries"]`) and run
-   `python3 build.py`. Now the "Get openings" buttons arrive with program, job, place and source filled in.
-5. Once Career Route is on GitHub Pages, set `SITE_URL` and `FEED_URL` at the top of Code.gs.
-   Until then, emails still send LinkedIn and USAJOBS search links, just no listings.
-6. Run **installTriggers** once.
-7. Submit the form yourself, then run **sendTestDigestToMe**. Check both emails. When they look right,
+   script). Your form already has its questions, so setupForm only checks that every question the emails
+   read is there (by exact title) and writes the result to a "Setup" tab. It changes nothing on the form.
+   If it stops with "missing questions", a question title was edited on the form; put the title back.
+4. Nothing to do here: the pre-fill numbers are already in `data.py`, and `SITE_URL` and `FEED_URL` are
+   already set in Code.gs. Until the first openings feed is published, emails send LinkedIn and USAJOBS
+   search links instead of listings.
+5. Run **installTriggers** once.
+6. Submit the form yourself, then run **sendTestDigestToMe**. Check both emails. When they look right,
    set `TEST_MODE: false` and save.
 
 ## Daily feed (Docker, from the internfeed-shorts folder)
