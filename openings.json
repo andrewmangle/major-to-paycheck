@@ -1,81 +1,7 @@
 {
- "generated": "2026-11-13T09:39:27",
- "count": 159,
+ "generated": "2026-11-14T09:37:15",
+ "count": 157,
  "openings": [
-  {
-   "code": "#2001",
-   "id": "2001",
-   "title": "Associate FCA Examiner",
-   "company": "Farm Credit Administration",
-   "location": "5 locations",
-   "work_mode": "Hybrid",
-   "remote": false,
-   "pay": "$18/hr",
-   "pay_type": "Paid",
-   "deadline": "2026-11-13",
-   "apply_url": "https://www.usajobs.gov/job/890330700",
-   "majors": "Accounting; Finance",
-   "class_standing": "High school; Undergraduate; Graduate",
-   "source": "USAJOBS",
-   "series": [
-    "0599"
-   ],
-   "roles": [
-    "staff-accountant",
-    "budget-analyst",
-    "revenue-agent",
-    "financial-analyst"
-   ],
-   "places": [
-    "dc",
-    "nova"
-   ]
-  },
-  {
-   "code": "#2003",
-   "id": "2003",
-   "title": "Student Volunteer (Unpaid Position)",
-   "company": "Office of Inspector General",
-   "location": "Washington, DC",
-   "work_mode": "On-site",
-   "remote": false,
-   "pay": "Unpaid",
-   "pay_type": "Unpaid",
-   "deadline": "2026-11-13",
-   "apply_url": "https://www.usajobs.gov/job/892104000",
-   "majors": "All majors",
-   "class_standing": "Undergraduate",
-   "source": "USAJOBS",
-   "series": [
-    "0099"
-   ],
-   "roles": [],
-   "places": [
-    "dc",
-    "nova"
-   ]
-  },
-  {
-   "code": "#2002",
-   "id": "2002",
-   "title": "Budget Technician",
-   "company": "Veterans Health Administration",
-   "location": "Albuquerque, NM",
-   "work_mode": "On-site",
-   "remote": false,
-   "pay": "$24-$32/hr",
-   "pay_type": "Paid",
-   "deadline": "2026-11-13",
-   "apply_url": "https://www.usajobs.gov/job/891897300",
-   "majors": "Accounting; Finance",
-   "class_standing": "Current students; US citizens",
-   "source": "USAJOBS",
-   "series": [
-    "0561"
-   ],
-   "roles": [],
-   "places": []
-  },
   {
    "code": "#2004",
    "id": "2004",
@@ -1348,6 +1274,27 @@
    "places": []
   },
   {
+   "code": "#2160",
+   "id": "2160",
+   "title": "Sewing Machine Operator",
+   "company": "Veterans Health Administration",
+   "location": "Fayetteville, AR",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$21-$24/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/891194600",
+   "majors": "See listing",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "3111"
+   ],
+   "roles": [],
+   "places": []
+  },
+  {
    "code": "#2057",
    "id": "2057",
    "title": "Student Trainee (Program Analysis) - CES Intern",
@@ -1678,33 +1625,6 @@
    "places": []
   },
   {
-   "code": "#2071",
-   "id": "2071",
-   "title": "Student Trainee (Vocational Rehabilitation Counselor) Internship Program",
-   "company": "Veterans Benefits Administration",
-   "location": "39 locations",
-   "work_mode": "Hybrid",
-   "remote": false,
-   "pay": "$24-$39/hr",
-   "pay_type": "Paid",
-   "deadline": "2026-12-09",
-   "apply_url": "https://www.usajobs.gov/job/892051300",
-   "majors": "Economics; Psychology; Sociology; Political Science",
-   "class_standing": "Undergraduate; Graduate; US citizens",
-   "source": "USAJOBS",
-   "series": [
-    "0199"
-   ],
-   "roles": [
-    "economist"
-   ],
-   "places": [
-    "baltimore",
-    "dc",
-    "nova"
-   ]
-  },
-  {
    "code": "#2072",
    "id": "2072",
    "title": "Summer Intern (Legal Administrative Specialist) (Non-Tax)",
@@ -1972,6 +1892,33 @@
    ],
    "roles": [],
    "places": []
+  },
+  {
+   "code": "#2071",
+   "id": "2071",
+   "title": "Student Trainee (Vocational Rehabilitation Counselor) Internship Program",
+   "company": "Veterans Benefits Administration",
+   "location": "39 locations",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$24-$39/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-12-18",
+   "apply_url": "https://www.usajobs.gov/job/892051300",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0199"
+   ],
+   "roles": [
+    "economist"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
   },
   {
    "code": "#2083",
