@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-15T16:43:20",
- "count": 156,
+ "generated": "2026-11-16T09:52:23",
+ "count": 165,
  "openings": [
   {
    "code": "#2007",
@@ -1250,6 +1250,169 @@
    "places": []
   },
   {
+   "code": "#2161",
+   "id": "2161",
+   "title": "Student Trainee (Psychology)",
+   "company": "U.S. Secret Service",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$22-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/892819500",
+   "majors": "Psychology",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0199"
+   ],
+   "roles": [
+    "economist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2162",
+   "id": "2162",
+   "title": "Student Trainee - Administrative (Automation)",
+   "company": "U.S. Secret Service",
+   "location": "5 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$13-$19/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/892836800",
+   "majors": "Business Administration; Public Administration",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2163",
+   "id": "2163",
+   "title": "Information Technology Specialist (PATHWAYS)",
+   "company": "U.S. Secret Service",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$18-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/892841300",
+   "majors": "Computer Science; Information Systems; Cybersecurity",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "2299"
+   ],
+   "roles": [
+    "systems-analyst",
+    "security-analyst",
+    "it-support",
+    "database-admin"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2164",
+   "id": "2164",
+   "title": "Student Trainee (Intelligence Research)",
+   "company": "U.S. Secret Service",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$18-$26/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/892847500",
+   "majors": "Economics; Psychology; Sociology; Political Science",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0199"
+   ],
+   "roles": [
+    "economist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2165",
+   "id": "2165",
+   "title": "Student Trainee (Administrative Operations)",
+   "company": "U.S. Secret Service",
+   "location": "Washington, DC",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$22-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/892855000",
+   "majors": "Business Administration; Public Administration",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
+   ]
+  },
+  {
+   "code": "#2166",
+   "id": "2166",
+   "title": "Student Trainee (Physical Scientist)",
+   "company": "U.S. Secret Service",
+   "location": "2 locations",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$22-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-18",
+   "apply_url": "https://www.usajobs.gov/job/892862900",
+   "majors": "Physics; Chemistry; Geology; Meteorology",
+   "class_standing": "High school; Undergraduate; Graduate; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "1399"
+   ],
+   "roles": [],
+   "places": [
+    "baltimore",
+    "dc",
+    "nova"
+   ]
+  },
+  {
    "code": "#2160",
    "id": "2160",
    "title": "Sewing Machine Operator",
@@ -1296,6 +1459,34 @@
    "places": [
     "baltimore",
     "dc"
+   ]
+  },
+  {
+   "code": "#2167",
+   "id": "2167",
+   "title": "Pathways Student Trainee (PROTOCOL)",
+   "company": "Department of State Headquarters",
+   "location": "Washington, DC",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$28-$36/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-20",
+   "apply_url": "https://www.usajobs.gov/job/892460000",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "High school; Undergraduate",
+   "source": "USAJOBS",
+   "series": [
+    "0399"
+   ],
+   "roles": [
+    "management-analyst",
+    "project-specialist",
+    "ops-specialist"
+   ],
+   "places": [
+    "dc",
+    "nova"
    ]
   },
   {
@@ -1512,6 +1703,29 @@
     "dc",
     "nova"
    ]
+  },
+  {
+   "code": "#2168",
+   "id": "2168",
+   "title": "Voluntary Services Assistant",
+   "company": "Veterans Health Administration",
+   "location": "Fayetteville, AR",
+   "work_mode": "Hybrid",
+   "remote": false,
+   "pay": "$22-$28/hr",
+   "pay_type": "Paid",
+   "deadline": "2026-11-25",
+   "apply_url": "https://www.usajobs.gov/job/892754000",
+   "majors": "Business Administration; Public Administration; Management",
+   "class_standing": "Current students; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "0303"
+   ],
+   "roles": [
+    "ops-specialist"
+   ],
+   "places": []
   },
   {
    "code": "#2067",
@@ -2236,6 +2450,27 @@
     "baltimore",
     "dc"
    ]
+  },
+  {
+   "code": "#2169",
+   "id": "2169",
+   "title": "Maintenance Worker (Trails)(Seasonal)",
+   "company": "National Park Service",
+   "location": "2 locations, ME",
+   "work_mode": "On-site",
+   "remote": false,
+   "pay": "$23-$29/hr",
+   "pay_type": "Paid",
+   "deadline": "2027-05-17",
+   "apply_url": "https://www.usajobs.gov/job/892925400",
+   "majors": "See listing",
+   "class_standing": "High school; US citizens",
+   "source": "USAJOBS",
+   "series": [
+    "4749"
+   ],
+   "roles": [],
+   "places": []
   },
   {
    "code": "#2097",
